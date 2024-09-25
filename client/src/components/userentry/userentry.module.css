@@ -1,0 +1,70 @@
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.header-left h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-center .search-bar {
+  width: 50%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.header-right .entry-button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-right .entry-button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Banner Styling */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+/* Reference Image Section */
+.reference-image-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.reference-image {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
