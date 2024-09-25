@@ -162,7 +162,7 @@ const validateAddress = (address) => {
         {errorMessage && <p className={styles.error}>{errorMessage}</p>}
         <form onSubmit={handleRegister} className={styles.registrationForm}>
           <div className={styles.formGroup}>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">Full Name</label>
             <input
               type="text"
               id="username"
@@ -293,7 +293,7 @@ const validateAddress = (address) => {
           </button>
         </form>
         <p>
-          Already have an account? <Link to="/login">Login here</Link>
+          Already have an account ? <Link to="/login">Login here</Link>
         </p>
       </div>
     </div>
