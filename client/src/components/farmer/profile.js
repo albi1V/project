@@ -1,35 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Header from '../header/header';
-import styles from './frmrp.module.css'; // Import the styles as CSS module
+import { useNavigate } from 'react-router-dom';
+import styles from './profile.module.css'; // Importing CSS module
 
-const FarmerProfile = () => {
+const Profile = () => {
   const [userData, setUserData] = useState(null); // Store user data
   const [loading, setLoading] = useState(true);   // Loading state
   const [error, setError] = useState('');         // Error state
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const fetchUserData = async () => {
       const token = localStorage.getItem('token');
       const email = localStorage.getItem('email'); // Get the email stored during login
 
-      console.log(localStorage.getItem('token'));
-      console.log(localStorage.getItem('email'));
-
-
       if (!token || !email) {
         setError('Unauthorized');
         setLoading(false);
         return;
       }
-  
+
       try {
         const response = await axios.get(`http://localhost:5000/api/auth/user/${email}`, {
           headers: {
             Authorization: `Bearer ${token}`, // Include the token for authorization
           },
         });
-        
+
         setUserData(response.data);
         setLoading(false);
       } catch (error) {
@@ -37,10 +34,9 @@ const FarmerProfile = () => {
         setLoading(false);
       }
     };
-  
+
     fetchUserData();
   }, []);
-  
 
   if (loading) {
     return <p className={styles.loading}>Loading...</p>;
@@ -51,25 +47,21 @@ const FarmerProfile = () => {
   }
 
   return (
-    <div>
-     <Header/>
-          <div className={styles.container}>
-      <h1 className={styles.title}>Welcome, {userData.username}!</h1> {/* Display user's name */}
-      <p className={styles.message}>
-        We're glad to have you here. Explore the platform to manage your crops and connect with buyers.
-      </p>
-
+    <div className={styles.profileContainer}>
+      <h1 className={styles.title}>User Profile</h1>
       <div className={styles.userInfo}>
-        <p><strong>Role:</strong> {userData.role}</p>
+        <p><strong>Full Name:</strong> {userData.username}</p>
+        <p><strong>Email:</strong> {userData.email}</p>
         <p><strong>Address:</strong> {userData.address}</p>
         <p><strong>Phone:</strong> {userData.phone}</p>
-        <p><strong>Email:</strong> {userData.email}</p>
-        <p><strong>Account Created:</strong> {new Date(userData.createdAt).toLocaleString()}</p>
+        <p><strong>Role:</strong> {userData.role}</p>
+        <p><strong>Account Created:</strong> {new Date(userData.createdAt).toLocaleDateString()}</p>
       </div>
-      
-    </div>
+      <button className={styles.editButton} onClick={() => navigate('/edit-profile')}>
+        Edit Profile
+      </button>
     </div>
   );
 };
 
-export default FarmerProfile;
+export default Profile;

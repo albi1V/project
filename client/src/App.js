@@ -10,7 +10,9 @@ import Header from './components/header/header';
 import ForgotPasswordPage from './components/forgotpasssword/forgotpwrd';
 import ResetPasswordPage from './components/forgotpasssword/resetpass';
 import './App.css';
-import FarmerProfile from './components/farmer/farmer_profile';
+import FarmerProfile from './components/farmer/profile';
+import EditProfile from './components/farmer/editprofile';
+
 
 
 const App = () => {
@@ -22,14 +24,14 @@ const App = () => {
           <Route path="/" element={<UserEntry />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<Registration />}/>
-          <Route path="/farmer-profile" element={<FarmerProfile />}/>
+          <Route path="/profile" element={<FarmerProfile />}/>
           <Route path="/farmer-landing" element={<Farmerlanding />}/>
           <Route path="/seller-landing" element={<Sellerlanding />}/>
           <Route path="/footer" element={<Footer />}/>
           <Route path="/header" element={<Header />}/>
           <Route path="/forgot-password" element={<ForgotPasswordPage />}/>
           <Route path="/reset-password/:token" element={<ResetPasswordPage />}/>
-          
+          <Route path="/edit-profile" element={<EditProfile />}/>
 
         </Routes>
       </BrowserRouter>

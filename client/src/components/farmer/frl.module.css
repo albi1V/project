@@ -1,6 +1,70 @@
 /* Styles for the FarmerProfile */
 
 /* Loading and Error Messages */
+
+
+/* Header Styles */
+/* Header Styles */
+.header {
+  background-color: #2f8f2f;
+  padding: 0.4rem; /* Reduced padding to half */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin-left: 1.5rem;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.selectMenu {
+  background-color: #2f8f2f;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+
+
+
 .loading {
     font-size: 18px;
     color: #4CAF50;
