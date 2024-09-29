@@ -30,9 +30,9 @@ const editBlog = async (req, res) => {
     }
 
     try {
-      const { blogId } = req.params;
-      const { title, content } = req.body;
-      const userId = req.userId; // Extracted from token in verifyToken middleware
+      const { blogId } = req.params; // Get blogId from request parameters
+      const { title, content } = req.body; // Get title and content from request body
+      const userId = req.userId; // User ID from verified token in the auth middleware
 
       // Find the blog by ID
       const blog = await Blog.findById(blogId);
@@ -46,23 +46,24 @@ const editBlog = async (req, res) => {
       }
 
       // Update blog fields
-      blog.title = title;
-      blog.content = content;
+      blog.title = title || blog.title; // Update title if provided
+      blog.content = content || blog.content; // Update content if provided
 
       // If a new image is uploaded, update the image field
       if (req.file) {
-        // If an old image exists, delete it
+        // Delete the old image if it exists
         if (blog.image) {
           const oldImagePath = path.join(blogImageDir, blog.image);
           if (fs.existsSync(oldImagePath)) {
             fs.unlinkSync(oldImagePath); // Delete the old image file
           }
         }
-        blog.image = req.file.filename;
+        blog.image = req.file.filename; // Update the blog image with the new file
       }
 
       // Save the updated blog
       const updatedBlog = await blog.save();
+
       return res.status(200).json({ message: "Blog updated successfully!", blog: updatedBlog });
     } catch (error) {
       console.error("Server error:", error);
