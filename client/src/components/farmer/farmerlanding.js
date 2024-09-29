@@ -98,23 +98,23 @@ const FarmerLanding = () => {
 
       {/* Cards Section */}
       <section className={styles.cardSection}>
-        <div className={styles.card} onClick={() => console.log('Card 1 clicked')}>
-          <img src="path/to/image1.jpg" alt="Add Post" className={styles.cardImage} />
-          <h2>ADD POST</h2>
-        </div>
-        <div className={styles.card} onClick={() => console.log('Card 2 clicked')}>
-          <img src="path/to/image2.jpg" alt="Check Products" className={styles.cardImage} />
-          <h2>CHECK PRODUCTS</h2>
-        </div>
-        <div className={styles.card} onClick={() => console.log('Card 3 clicked')}>
-          <img src="path/to/image3.jpg" alt="Whats New" className={styles.cardImage} />
-          <h2>WHATS NEW</h2>
-        </div>
-        <div className={styles.card} onClick={() => console.log('Card 4 clicked')}>
-          <img src="path/to/image4.jpg" alt="Manage Waste" className={styles.cardImage} />
-          <h2>MANAGE WASTE</h2>
-        </div>
-      </section>
+          <div className={styles.card} onClick={() => navigate('/add-blog')}>
+            <img src="path/to/image1.jpg" alt="Add Post" className={styles.cardImage} />
+            <h2>ADD POST</h2>
+          </div>
+          <div className={styles.card} onClick={() => console.log('Card 2 clicked')}>
+            <img src="path/to/image2.jpg" alt="Check Products" className={styles.cardImage} />
+            <h2>CHECK PRODUCTS</h2>
+          </div>
+          <div className={styles.card} onClick={() => console.log('Card 3 clicked')}>
+            <img src="path/to/image3.jpg" alt="Whats New" className={styles.cardImage} />
+            <h2>WHATS NEW</h2>
+          </div>
+          <div className={styles.card} onClick={() => console.log('Card 4 clicked')}>
+            <img src="path/to/image4.jpg" alt="Manage Waste" className={styles.cardImage} />
+            <h2>MANAGE WASTE</h2>
+          </div>
+        </section>
 
       {/* Blog Section */}
       <section className={styles.blogSection}>

@@ -5,6 +5,7 @@ import styles from './profile.module.css'; // Importing CSS module
 
 const Profile = () => {
   const [userData, setUserData] = useState(null); // Store user data
+  const [userBlogs, setUserBlogs] = useState([]); // Store blogs
   const [loading, setLoading] = useState(true);   // Loading state
   const [error, setError] = useState('');         // Error state
   const navigate = useNavigate(); // Initialize useNavigate
@@ -21,16 +22,27 @@ const Profile = () => {
       }
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/auth/user/${email}`, {
+        // Fetch user data
+        const userResponse = await axios.get(`http://localhost:5000/api/auth/user/${email}`, {
           headers: {
             Authorization: `Bearer ${token}`, // Include the token for authorization
           },
         });
 
-        setUserData(response.data);
+        setUserData(userResponse.data);
+
+        // Fetch user's blogs using the userId from the fetched user data
+        const userId = userResponse.data._id; // Assuming the userId is stored as _id
+        const blogsResponse = await axios.get(`http://localhost:5000/api/blog/view/user/${userId}`, {
+          headers: {
+            Authorization: `Bearer ${token}`, // Include the token for authorization
+          },
+        });
+
+        setUserBlogs(blogsResponse.data); // Store the user's blogs
         setLoading(false);
       } catch (error) {
-        setError('Failed to fetch user data');
+        setError('Failed to fetch data');
         setLoading(false);
       }
     };
@@ -57,6 +69,31 @@ const Profile = () => {
         <p><strong>Role:</strong> {userData.role}</p>
         <p><strong>Account Created:</strong> {new Date(userData.createdAt).toLocaleDateString()}</p>
       </div>
+
+      <h2 className={styles.blogTitle}>Your Blogs</h2>
+      {userBlogs.length === 0 ? (
+        <p>No blogs found</p>
+      ) : (
+        <div className={styles.blogList}>
+          {userBlogs.map((blog) => (
+            <div key={blog._id} className={styles.blogItem}>
+              <h3>{blog.title}</h3>
+              <p>{blog.content}</p>
+              {blog.image && <img src={`http://localhost:5000/api/blog/get-blog-images/${blog.image}`} alt={blog.title} />}
+              <p><strong>Posted on:</strong> {new Date(blog.createdAt).toLocaleDateString()}</p>
+
+              {/* Edit Button for Navigating to EditBlog Page */}
+              <button
+                className={styles.editButton}
+                onClick={() => navigate(`/edit-blog/${blog._id}`)} // Navigate to EditBlog with blog._id
+              >
+                Edit
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+      
       <button className={styles.editButton} onClick={() => navigate('/edit-profile')}>
         Edit Profile
       </button>

@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const authRoutes = require('./authRoutes');
-// const farmerRoutes = require('./farmerRoutes');
+const blogRoutes = require('./blogRoutes');
+
 
 
             
 router.use('/auth',authRoutes)
-//router.use('/farmer',farmerRoutes);
-// router.use('/register', registerroutes);
-// router.use('/blog', blogRoutes);
+
+router.use('/blog', blogRoutes);
 
 module.exports = router;

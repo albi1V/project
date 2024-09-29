@@ -12,7 +12,9 @@ import ResetPasswordPage from './components/forgotpasssword/resetpass';
 import './App.css';
 import FarmerProfile from './components/farmer/profile';
 import EditProfile from './components/farmer/editprofile';
-
+import AddBlog from './components/farmer/addblog';
+import ViewBlogs from './components/farmer/viewblog';
+import EditBlog from './components/farmer/editBlog';
 
 
 const App = () => {
@@ -32,6 +34,10 @@ const App = () => {
           <Route path="/forgot-password" element={<ForgotPasswordPage />}/>
           <Route path="/reset-password/:token" element={<ResetPasswordPage />}/>
           <Route path="/edit-profile" element={<EditProfile />}/>
+          <Route path="/add-blog" element={<AddBlog />} />
+          <Route path="/view-all-blogs" element={<ViewBlogs />} />
+          <Route path="/edit-blog/:blogId" element={<EditBlog />} />
+
 
         </Routes>
       </BrowserRouter>

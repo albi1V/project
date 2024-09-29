@@ -1,36 +1,147 @@
+/* profile.module.css */
+
 .profileContainer {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  }
-  
-  .title {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .userInfo {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .editButton {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .editButton:hover {
-    background-color: #45a049;
-  }
-  
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.userInfo {
+  padding: 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.userInfo p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.blogTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.blogList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blogItem {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blogItem h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.blogItem p {
+  font-size: 14px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.blogItem img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.editButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.editButton:hover {
+  background-color: #0056b3;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #007bff;
+}
+
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+}
+
+
+/* Add blog actions styling */
+.blogActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.editButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editButton:hover {
+  background-color: #45a049;
+}
+
+.deleteButton {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #d32f2f;
+}
+
+.editProfileButton {
+  margin-top: 20px;
+  background-color: #2196f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editProfileButton:hover {
+  background-color: #1976d2;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./registration.module.css";
 import axios from "axios";
@@ -14,6 +14,7 @@ const Registration = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isButtonEnabled, setIsButtonEnabled] = useState(false);
 
   const [usernameError, setUsernameError] = useState("");
   const [addressError, setAddressError] = useState("");
@@ -31,25 +32,25 @@ const Registration = () => {
 
   const navigate = useNavigate();
 
-// Validate Username (no digits, special characters, and no consecutive spaces)
-const validateUsername = (name) => {
-  const isValid = /^[A-Za-z\s]+$/.test(name) && !/\s{2,}/.test(name);
-  setUsernameError(
-    isValid
-      ? ""
-      : "Username should only contain letters and spaces, and no consecutive spaces."
-  );
-};
+  // Validate Username (no digits, special characters, and no consecutive spaces)
+  const validateUsername = (name) => {
+    const isValid = /^[A-Za-z\s]+$/.test(name) && !/\s{2,}/.test(name);
+    setUsernameError(
+      isValid
+        ? ""
+        : "Username should only contain letters and spaces, and no consecutive spaces."
+    );
+  };
 
-// Validate Address (no special characters and no consecutive spaces)
-const validateAddress = (address) => {
-  const isValid = /^[A-Za-z0-9\s]+$/.test(address) && !/\s{2,}/.test(address);
-  setAddressError(
-    isValid
-      ? ""
-      : "Address should not contain special characters or consecutive spaces."
-  );
-};
+  // Validate Address (no special characters and no consecutive spaces)
+  const validateAddress = (address) => {
+    const isValid = /^[A-Za-z0-9\s]+$/.test(address) && !/\s{2,}/.test(address);
+    setAddressError(
+      isValid
+        ? ""
+        : "Address should not contain special characters or consecutive spaces."
+    );
+  };
 
   // Validate Phone (only numbers starting with 6,7,8,9)
   const validatePhone = (number) => {
@@ -91,19 +92,19 @@ const validateAddress = (address) => {
   const handleUsernameChange = (e) => {
     const value = e.target.value;
     setUsername(value);
-    validateUsername(value); // Call the validation function for username
+    validateUsername(value); 
   };
 
   const handleAddressChange = (e) => {
     const value = e.target.value;
     setAddress(value);
-    validateAddress(value); // Call the validation function for address
+    validateAddress(value); 
   };
 
   const handlePhoneChange = (e) => {
     const value = e.target.value;
     setPhone(value);
-    validatePhone(value); // Call the validation function for phone number
+    validatePhone(value);
   };
 
   const handlePasswordChange = (e) => {
@@ -153,6 +154,32 @@ const validateAddress = (address) => {
       setErrorMessage("Registration failed. Please try again.");
     }
   };
+
+  useEffect(() => {
+    // Enable the button if all fields are valid
+    const isFormValid =
+      username && !usernameError &&
+      address && !addressError &&
+      phone && !phoneError &&
+      password && !passwordError &&
+      password === confirmPassword &&
+      role && email && otp;
+
+    setIsButtonEnabled(isFormValid);
+  }, [
+    username,
+    usernameError,
+    address,
+    addressError,
+    phone,
+    phoneError,
+    password,
+    passwordError,
+    confirmPassword,
+    role,
+    email,
+    otp
+  ]);
 
   return (
     <div className={styles.registrationPage}>
@@ -253,18 +280,28 @@ const validateAddress = (address) => {
               <button
                 type="button"
                 onClick={() => setPasswordVisible(!passwordVisible)}
-                className={styles.toggleButton}
+                className={styles.togglePassword}
               >
                 {passwordVisible ? "Hide" : "Show"}
               </button>
             </div>
-            <div className={styles.passwordRequirements}>
-              <p className={passwordCriteria.length ? styles.valid : styles.invalid}>At least 8 characters</p>
-              <p className={passwordCriteria.uppercase ? styles.valid : styles.invalid}>At least one uppercase letter</p>
-              <p className={passwordCriteria.lowercase ? styles.valid : styles.invalid}>At least one lowercase letter</p>
-              <p className={passwordCriteria.number ? styles.valid : styles.invalid}>At least one number</p>
-              <p className={passwordCriteria.special ? styles.valid : styles.invalid}>At least one special character</p>
-            </div>
+            <ul className={styles.passwordCriteria}>
+              <li className={passwordCriteria.length ? styles.valid : ""}>
+                At least 8 characters
+              </li>
+              <li className={passwordCriteria.uppercase ? styles.valid : ""}>
+                At least one uppercase letter
+              </li>
+              <li className={passwordCriteria.lowercase ? styles.valid : ""}>
+                At least one lowercase letter
+              </li>
+              <li className={passwordCriteria.number ? styles.valid : ""}>
+                At least one number
+              </li>
+              <li className={passwordCriteria.special ? styles.valid : ""}>
+                At least one special character
+              </li>
+            </ul>
             {passwordError && <p className={styles.error}>{passwordError}</p>}
           </div>
 
@@ -280,20 +317,30 @@ const validateAddress = (address) => {
               />
               <button
                 type="button"
-                onClick={() => setConfirmPasswordVisible(!confirmPasswordVisible)}
-                className={styles.toggleButton}
+                onClick={() =>
+                  setConfirmPasswordVisible(!confirmPasswordVisible)
+                }
+                className={styles.togglePassword}
               >
                 {confirmPasswordVisible ? "Hide" : "Show"}
               </button>
             </div>
+            {confirmPassword && password !== confirmPassword && (
+              <p className={styles.error}>Passwords do not match.</p>
+            )}
           </div>
 
-          <button type="submit" className={styles.submitButton}>
+          <button
+            type="submit"
+            disabled={!isButtonEnabled}
+            className={styles.submitBtn}
+          >
             Register
           </button>
         </form>
-        <p>
-          Already have an account ? <Link to="/login">Login here</Link>
+
+        <p className={styles.loginLink}>
+          Already have an account? <Link to="/login">Login here</Link>.
         </p>
       </div>
     </div>
