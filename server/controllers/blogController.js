@@ -40,8 +40,12 @@ const editBlog = async (req, res) => {
         return res.status(404).json({ message: "Blog not found" });
       }
 
+      // Log the userId and blog.userId to verify ownership
+      console.log("User ID from token:", userId);
+      console.log("User ID of the blog:", blog.userId.toString());
+
       // Check if the user is the owner of the blog
-      if (blog.userId.toString() !== userId) {
+      if (blog.userId.toString() !== userId.toString()) {
         return res.status(403).json({ message: "Unauthorized" });
       }
 
@@ -82,8 +86,15 @@ const addBlog = async (req, res) => {
 
     try {
       const { title, content } = req.body;
-      const userId = req.userId;
+      const userId = req.user._id; // Correctly access the user ID from req.user
+
+      console.log("User ID:", userId); // Check if `userId` is correctly set
+
       const image = req.file ? req.file.filename : null;
+
+      if (!userId) {
+        return res.status(400).json({ message: "User ID is required" });
+      }
 
       const newBlog = new Blog({
         userId,
@@ -104,14 +115,14 @@ const addBlog = async (req, res) => {
 // Get User Blogs Controller
 const getUserBlogs = async (req, res) => {
   try {
-    const userId = req.userId; // Extracted from token in verifyToken middleware
+    const userId = req.params.userId; // Extract userId from URL parameters
     const blogs = await Blog.find({ userId });
 
     if (!blogs || blogs.length === 0) {
       return res.status(404).json({ message: "No blogs found for this user" });
     }
 
-    res.status(200).json(blogs); // Return the blogs
+    res.status(200).json(blogs);
   } catch (error) {
     console.error("Failed to retrieve blogs:", error);
     res.status(500).json({ message: "Failed to retrieve blogs", error });
@@ -176,5 +187,36 @@ const getBlogById = async (req, res) => {
   }
 };
 
+// Delete Blog Controller
+
+
+const deleteBlog = async (req, res) => {
+  const { blogId } = req.params;
+  const userId = req.user._id; // Ensure `userId` is passed from authMiddleware
+
+  try {
+    // Ensure the blogId is a valid MongoDB ObjectId
+    if (!mongoose.Types.ObjectId.isValid(blogId)) {
+      return res.status(400).json({ message: 'Invalid Blog ID' });
+    }
+
+    // Find the blog by ID and ensure it belongs to the authenticated user
+    const blog = await Blog.findOne({ _id: blogId, userId: userId });
+
+    if (!blog) {
+      return res.status(404).json({ message: 'Blog not found or unauthorized' });
+    }
+
+    // Use deleteOne to remove the blog
+    await Blog.deleteOne({ _id: blogId, userId: userId });
+    return res.status(200).json({ message: 'Blog deleted successfully' });
+  } catch (error) {
+    console.error(`Error deleting blog: ${error.message}`); // Log for better debugging
+    return res.status(500).json({ message: 'Server error', error: error.message });
+  }
+};
+
+
+
 // Export all the controller functions together
-module.exports = { addBlog, getUserBlogs, getBlogImages, getAllBlogs, editBlog, getBlogById };
+module.exports = { addBlog, getUserBlogs, getBlogImages, getAllBlogs, editBlog, getBlogById, deleteBlog };

@@ -6,8 +6,7 @@ const authMiddleware = require('../middleware/authMiddleware.js');
 
 router.post('/addblog', authMiddleware, addBlog);
 
-
-//router.delete('/delete/:id', deleteBlog);
+router.delete('/delete/:blogId', authMiddleware, deleteBlog);
 
 router.put('/edit-by-id/:blogId', authMiddleware, editBlog); // Use PUT method for editing
 

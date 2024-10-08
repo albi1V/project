@@ -11,11 +11,6 @@ import blog1 from '../../assets/blog_images/blog1.jpg';
 import blog2 from '../../assets/blog_images/blog2.jpg';
 import blog3 from '../../assets/blog_images/blog3.jpg';
 
-
-
-
-
-
 const UserEntry = () => {
   const navigate = useNavigate();
 
@@ -25,6 +20,10 @@ const UserEntry = () => {
 
   const handleRegisterClick = () => {
     navigate('/register');
+  };
+
+  const handleAdminLoginClick = () => {
+    navigate('/admin-login'); // Navigate to the Admin login page
   };
 
   // Inline Styles
@@ -211,6 +210,13 @@ const blogTextStyle = {
           >
             Register
           </button>
+          {/* Admin Login Button */}
+          <button
+            onClick={handleAdminLoginClick}
+            style={buttonStyle}
+          >
+            Admin Login
+          </button>
         </div>
       </header>
 
@@ -275,62 +281,49 @@ const blogTextStyle = {
           {/* Card Content */}
           <div style={cardTitleStyle}>Tech-Driven Solutions</div>
           <div style={cardTextStyle}>
-            Harness the power of technology to improve farming efficiency and productivity.
+            Discover how technology is revolutionizing agriculture today.
           </div>
         </div>
       </section>
 
-
+      {/* Blog Section */}
       <section style={blogSectionStyle}>
-      <h2 style={blogTitleStyle}>Latest Blogs</h2>
-      <div style={blogGridStyle}>
-        <div style={blogCardStyle}>
-          <img
-            src={blog1}
-            alt="Blog 1"
-            style={blogImageStyle}
-          />
-          <div style={blogContentStyle}>
-            <h3 style={blogTitleTextStyle}>How to Improve Crop Yield</h3>
-            <p style={blogTextStyle}>
-              Discover expert tips and strategies to increase crop yield and maximize efficiency on your farm.
-            </p>
+        <h2 style={blogTitleStyle}>Latest Blogs</h2>
+        <div style={blogGridStyle}>
+          <div style={blogCardStyle}>
+            <img src={blog1} alt="Blog 1" style={blogImageStyle} />
+            <div style={blogContentStyle}>
+              <h3 style={blogTitleTextStyle}>Blog Title 1</h3>
+              <p style={blogTextStyle}>
+                A brief description of the blog post content goes here...
+              </p>
+            </div>
+          </div>
+
+          <div style={blogCardStyle}>
+            <img src={blog2} alt="Blog 2" style={blogImageStyle} />
+            <div style={blogContentStyle}>
+              <h3 style={blogTitleTextStyle}>Blog Title 2</h3>
+              <p style={blogTextStyle}>
+                A brief description of the blog post content goes here...
+              </p>
+            </div>
+          </div>
+
+          <div style={blogCardStyle}>
+            <img src={blog3} alt="Blog 3" style={blogImageStyle} />
+            <div style={blogContentStyle}>
+              <h3 style={blogTitleTextStyle}>Blog Title 3</h3>
+              <p style={blogTextStyle}>
+                A brief description of the blog post content goes here...
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div style={blogCardStyle}>
-          <img
-            src={blog2}
-            alt="Blog 2"
-            style={blogImageStyle}
-          />
-          <div style={blogContentStyle}>
-            <h3 style={blogTitleTextStyle}>The Future of Farming Technology</h3>
-            <p style={blogTextStyle}>
-              Learn about the latest technological advancements that are revolutionizing agriculture.
-            </p>
-          </div>
-        </div>
-
-        <div style={blogCardStyle}>
-          <img
-            src={blog3}
-            alt="Blog 3"
-            style={blogImageStyle}
-          />
-          <div style={blogContentStyle}>
-            <h3 style={blogTitleTextStyle}>Organic Farming: A Growing Trend</h3>
-            <p style={blogTextStyle}>
-              Explore the rise of organic farming and how it’s shaping the future of food production.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-    <Footer/>
-    </section>
-
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

@@ -1,0 +1,93 @@
+/* Container for the list of schemes */
+.schemeListContainer {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto; /* Center the container */
+    background-color: #f7f7f7; /* Light background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Heading for the page */
+  .schemeListContainer h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  /* Unordered list for schemes */
+  .schemeList {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Each individual scheme */
+  .schemeItem {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect to give a clickable feel */
+  .schemeItem:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Scheme details */
+  .schemeDetails h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #007b5e; /* Dark green for the scheme name */
+  }
+  
+  .schemeDetails p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* Button for viewing more details */
+  .schemeLinkBtn {
+    background-color: #28a745; /* Green */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .schemeLinkBtn:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+  
+  /* Style for displaying the document link or image */
+  .schemeDocument {
+    margin-top: 15px;
+  }
+  
+  /* PDF or image styling */
+  .schemeDocument a {
+    text-decoration: none;
+    color: #007bff; /* Link blue color */
+  }
+  
+  .schemeDocument a:hover {
+    text-decoration: underline;
+  }
+  
+  /* If the document is an image, style it */
+  .schemeImage {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  

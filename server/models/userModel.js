@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   },
   role: {
     type: String,
-    enum: ['farmer', 'seller'], 
+    enum: ['farmer', 'seller', 'admin'], // Add 'admin' here
     required: true,
   },
   address: {
@@ -23,14 +23,14 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   password: {
     type: String,
     required: true,
   },
   otp: {
-    type: String, 
+    type: String,
   },
   resetPasswordToken: {
     type: String,

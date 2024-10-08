@@ -15,26 +15,34 @@ const EditBlog = () => {
 
   useEffect(() => {
     const fetchBlogData = async () => {
-      try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/blog/get-by-id/${blogId}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        try {
+            const token = localStorage.getItem('token');
+            console.log('Token:', token); // Log the token for debugging
+            
+            const response = await axios.get(`http://localhost:5000/api/blog/get-by-id/${blogId}`, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
 
-        setBlogData(response.data);
-        setTitle(response.data.title);
-        setContent(response.data.content);
-        setLoading(false);
-      } catch (error) {
-        setError('Failed to fetch blog');
-        setLoading(false);
-      }
+            setBlogData(response.data);
+            setTitle(response.data.title);
+            setContent(response.data.content);
+            setLoading(false);
+        } catch (error) {
+            if (error.response) {
+                console.error('Error fetching blog data:', error.response.data); // Log detailed error response
+            } else {
+                console.error('Error fetching blog data:', error.message); // Log general error message
+            }
+            setError('Failed to fetch blog');
+            setLoading(false);
+        }
     };
 
     fetchBlogData();
-  }, [blogId]);
+}, [blogId]);
+
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -48,7 +56,7 @@ const EditBlog = () => {
       }
 
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:5000/api/blog/edit/${blogId}`, formData, {
+      await axios.put(`http://localhost:5000/api/blog/edit-by-id/${blogId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,

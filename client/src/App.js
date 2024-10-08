@@ -5,6 +5,9 @@ import LoginPage from './components/login/login';
 import Registration from './components/registration/registration';
 import Farmerlanding from './components/farmer/farmerlanding';
 import Sellerlanding from './components/seller/sellerlanding';
+import AddProduct from './components/seller/addproduct';
+import Sellerprofile from './components/seller/slrprofile';
+
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import ForgotPasswordPage from './components/forgotpasssword/forgotpwrd';
@@ -15,6 +18,16 @@ import EditProfile from './components/farmer/editprofile';
 import AddBlog from './components/farmer/addblog';
 import ViewBlogs from './components/farmer/viewblog';
 import EditBlog from './components/farmer/editBlog';
+import EditProduct from './components/seller/editproduct';
+import ViewAllProducts from './components/products/viewallproducts';
+import Cart from './components/farmer/cart';
+
+import AdminLan from './components/admin/adminlan';
+import AddScheme from './components/admin/scheme';
+import ViewScheme from './components/admin/adviewscheme';
+import EditScheme from './components/admin/editschme';
+import FarmerViewSchemes from './components/admin/fmrviewscheme';
+
 
 
 const App = () => {
@@ -37,6 +50,17 @@ const App = () => {
           <Route path="/add-blog" element={<AddBlog />} />
           <Route path="/view-all-blogs" element={<ViewBlogs />} />
           <Route path="/edit-blog/:blogId" element={<EditBlog />} />
+          <Route path="/add-products" element={<AddProduct />}/>
+          <Route path="/seller-profile" element={<Sellerprofile />}/>
+          <Route path="/edit-product/:productId" element={<EditProduct/>} />
+          <Route path="/view-all-products" element={<ViewAllProducts/>} />
+          <Route path="/cart" element={<Cart />} />
+
+          <Route path="/adminlan" element={<AdminLan />} />
+          <Route path="/addscheme" element={<AddScheme />} />
+          <Route path="/adviewscheme" element={<ViewScheme />} />
+          <Route path="/editscheme/:schemeId" element={<EditScheme />} />
+          <Route path="/FarmerViewSchemes" element={<FarmerViewSchemes />} />
 
 
         </Routes>

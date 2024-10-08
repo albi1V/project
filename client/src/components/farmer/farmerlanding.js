@@ -40,18 +40,21 @@ const FarmerLanding = () => {
 
   const handleMenuChange = (event) => {
     const selectedValue = event.target.value;
-
-    // Logic to handle navigation based on selected option
+  
+    
     if (selectedValue === 'editProfile') {
       navigate('/edit-profile'); // Redirect to Edit Profile page
     } else if (selectedValue === 'profile') {
       navigate('/profile'); // Redirect to Profile page
+    } else if (selectedValue === 'cart') {
+      navigate('/cart'); // Redirect to Cart page
     } else if (selectedValue === 'logout') {
       localStorage.removeItem('token'); // Clear the token
       localStorage.removeItem('email'); // Clear the email
       navigate('/login'); // Redirect to Login page (or the landing page)
     }
   };
+  
 
   if (loading) {
     return <p className={styles.loading}>Loading...</p>;
@@ -80,6 +83,7 @@ const FarmerLanding = () => {
               <option value="">Select</option> {/* Default option */}
               <option value="editProfile">Edit Profile</option>
               <option value="profile">Profile</option>
+              <option value="cart">Cart</option>
               <option value="logout">Logout</option>
             </select>
           </div>
@@ -102,13 +106,17 @@ const FarmerLanding = () => {
             <img src="path/to/image1.jpg" alt="Add Post" className={styles.cardImage} />
             <h2>ADD POST</h2>
           </div>
-          <div className={styles.card} onClick={() => console.log('Card 2 clicked')}>
+          <div className={styles.card} onClick={() => navigate('/view-all-products')}>
             <img src="path/to/image2.jpg" alt="Check Products" className={styles.cardImage} />
             <h2>CHECK PRODUCTS</h2>
           </div>
-          <div className={styles.card} onClick={() => console.log('Card 3 clicked')}>
-            <img src="path/to/image3.jpg" alt="Whats New" className={styles.cardImage} />
-            <h2>WHATS NEW</h2>
+          <div className={styles.card} onClick={() => navigate('/view-all-blogs')}>
+            <img src="path/to/image2.jpg" alt="Check Products" className={styles.cardImage} />
+            <h2>VIEW BLOG</h2>
+          </div>
+          <div className={styles.card} onClick={() => navigate('/FarmerViewSchemes')}>
+            <img src="path/to/image3.jpg" alt="New Schemes" className={styles.cardImage} />
+            <h2>NEW SCHEMES</h2>
           </div>
           <div className={styles.card} onClick={() => console.log('Card 4 clicked')}>
             <img src="path/to/image4.jpg" alt="Manage Waste" className={styles.cardImage} />

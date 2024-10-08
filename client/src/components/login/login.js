@@ -13,12 +13,12 @@ const LoginPage = () => {
   const navigate = useNavigate(); 
 
   const handleLogin = async (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password, role });
-      
-      const { token, role: userRole, email: userEmail } = response.data; // Destructure email from response
-      console.log('User role:', userRole);
+      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+  
+      // Destructure role from the backend response
+      const { token, role: userRole, email: userEmail } = response.data;
   
       // Store token and email in localStorage
       localStorage.setItem('token', token);
@@ -26,19 +26,18 @@ const LoginPage = () => {
   
       // Redirect based on role
       if (userRole === 'farmer') {
-        console.log('Redirecting to farmer-landing');
         navigate('/farmer-landing');
       } else if (userRole === 'seller') {
-        console.log('Redirecting to seller-landing');
         navigate('/seller-landing');
-      } else {
-        console.error('Unhandled role:', userRole);
+      }else if (userRole === 'admin') {
+        navigate('/adminlan');  // Redirect admin to their page
       }
+
     } catch (error) {
-      console.error('Error during login:', error);
       setErrorMessage(error.response?.data?.message || "Login failed. Please try again.");
     }
   };
+  
 
 
  // Function to handle sign-in with Google
@@ -96,7 +95,7 @@ const LoginPage = () => {
               required
             />
           </div>
-          <div className={styles.formGroup}>
+          {/* <div className={styles.formGroup}>
             <label htmlFor="role">Role</label>
             <select
               id="role"
@@ -107,7 +106,7 @@ const LoginPage = () => {
               <option value="farmer">Farmer</option>
               <option value="seller">Seller</option>
             </select>
-          </div>
+          </div> */}
           {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>} {/* Display error message */}
           <button type="submit" className={styles.registerBtn}>Login</button>
           </form>
