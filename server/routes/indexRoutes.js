@@ -5,7 +5,9 @@ const blogRoutes = require('./blogRoutes');
 const productRoutes = require('./productRoutes');
 const cartRoutes = require('./cartRoutes');
 const schemeRoutes = require('./schemeRoutes');
-
+const wasteRoutes = require('./wasteRoutes');
+const trendRoutes = require('./trendRoutes')
+const trendSellRoutes = require('./trendSellRoutes')
 
 
             
@@ -18,6 +20,13 @@ router.use('/products', productRoutes);
 router.use('/cart', cartRoutes);
 
 router.use('/schemes', schemeRoutes);
+
+router.use('/waste', wasteRoutes);
+
+router.use('/trend',trendRoutes)
+
+router.use('/trendsell',trendSellRoutes)
+
 
 
 module.exports = router;

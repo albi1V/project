@@ -21,21 +21,28 @@ import EditBlog from './components/farmer/editBlog';
 import EditProduct from './components/seller/editproduct';
 import ViewAllProducts from './components/products/viewallproducts';
 import Cart from './components/farmer/cart';
+import ReqWaste from './components/farmer/requestforwaste';
+import ReqHeMade from './components/farmer/requestHemade';
+import ViewTrend from './components/farmer/trendview';
+import ReqSell from './components/farmer/trendReqForsell';
+
+
 
 import AdminLan from './components/admin/adminlan';
 import AddScheme from './components/admin/scheme';
 import ViewScheme from './components/admin/adviewscheme';
 import EditScheme from './components/admin/editschme';
 import FarmerViewSchemes from './components/admin/fmrviewscheme';
-
-
+import WasteRequest from './components/admin/wasterequest';
+import TrendAdd from './components/admin/trendadd';
+import TendPurch from './components/admin/tendPurchReq';
 
 const App = () => {
   return (
     <div className="app">
       <BrowserRouter>
         <Routes>
-          {/* Home or User Entry Route */}
+          
           <Route path="/" element={<UserEntry />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<Registration />}/>
@@ -50,17 +57,26 @@ const App = () => {
           <Route path="/add-blog" element={<AddBlog />} />
           <Route path="/view-all-blogs" element={<ViewBlogs />} />
           <Route path="/edit-blog/:blogId" element={<EditBlog />} />
+          <Route path="/request-for-waste" element={<ReqWaste />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/requestHemade" element={<ReqHeMade />} />
+          <Route path="/FarmerViewSchemes" element={<FarmerViewSchemes />} />
+          <Route path="/trendview" element={<ViewTrend />} />  
+          <Route path="/trendReqForsell" element={<ReqSell />} />
+          
+
           <Route path="/add-products" element={<AddProduct />}/>
           <Route path="/seller-profile" element={<Sellerprofile />}/>
           <Route path="/edit-product/:productId" element={<EditProduct/>} />
           <Route path="/view-all-products" element={<ViewAllProducts/>} />
-          <Route path="/cart" element={<Cart />} />
-
+          
           <Route path="/adminlan" element={<AdminLan />} />
           <Route path="/addscheme" element={<AddScheme />} />
           <Route path="/adviewscheme" element={<ViewScheme />} />
-          <Route path="/editscheme/:schemeId" element={<EditScheme />} />
-          <Route path="/FarmerViewSchemes" element={<FarmerViewSchemes />} />
+          <Route path="/editscheme/:schemeId" element={<EditScheme />} />         
+          <Route path="/WasteRequest" element={<WasteRequest />} />
+          <Route path="/trendadd" element={<TrendAdd/>} /> 
+          <Route path="/tendpurch" element={<TendPurch/>} /> 
 
 
         </Routes>

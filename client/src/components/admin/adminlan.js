@@ -27,9 +27,9 @@ const AdminConsole = () => {
           <img src="path_to_scheme_icon" alt="Scheme" className={styles.icon} />
           <p>view added Schemes</p>
         </div>
-        <div className={styles.gridItem} onClick={() => handleNavigation('/market-trend')}>
+        <div className={styles.gridItem} onClick={() => handleNavigation('/trendadd')}>
           <img src="path_to_market_trend_icon" alt="Market Trend" className={styles.icon} />
-          <p>Market Trend</p>
+          <p>Add Market Trend</p>
         </div>
         <div className={styles.gridItem} onClick={() => handleNavigation('/add-notification')}>
           <img src="path_to_notification_icon" alt="Add Notification" className={styles.icon} />
@@ -39,7 +39,7 @@ const AdminConsole = () => {
           <img src="path_to_manage_post_icon" alt="Manage Post" className={styles.icon} />
           <p>Manage Post</p>
         </div>
-        <div className={styles.gridItem} onClick={() => handleNavigation('/purchase-request')}>
+        <div className={styles.gridItem} onClick={() => handleNavigation('/tendpurch')}>
           <img src="path_to_purchase_request_icon" alt="View Purchase Request" className={styles.icon} />
           <p>View Purchase Request</p>
         </div>
@@ -50,6 +50,10 @@ const AdminConsole = () => {
         <div className={styles.gridItem} onClick={() => handleNavigation('/suggestions')}>
           <img src="path_to_suggestions_icon" alt="Suggestions" className={styles.icon} />
           <p>Suggestions</p>
+        </div>
+        <div className={styles.gridItem} onClick={() => handleNavigation('/WasteRequest')}>
+          <img src="path_to_suggestions_icon" alt="wate request" className={styles.icon} />
+          <p>waste request</p>
         </div>
       </div>
     </div>

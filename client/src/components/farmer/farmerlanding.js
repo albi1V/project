@@ -118,9 +118,17 @@ const FarmerLanding = () => {
             <img src="path/to/image3.jpg" alt="New Schemes" className={styles.cardImage} />
             <h2>NEW SCHEMES</h2>
           </div>
-          <div className={styles.card} onClick={() => console.log('Card 4 clicked')}>
+          <div className={styles.card} onClick={() => navigate('/request-for-waste')}>
             <img src="path/to/image4.jpg" alt="Manage Waste" className={styles.cardImage} />
             <h2>MANAGE WASTE</h2>
+          </div>
+          <div className={styles.card} onClick={() => navigate('/requestHemade')}>
+            <img src="path/to/image4.jpg" alt="Request He made" className={styles.cardImage} />
+            <h2>REQUEST MADE</h2>
+          </div>
+          <div className={styles.card} onClick={() => navigate('/trendview')}>
+            <img src="path/to/image4.jpg" alt="Manage Waste" className={styles.cardImage} />
+            <h2>CURRENT TREND</h2>
           </div>
         </section>
 
