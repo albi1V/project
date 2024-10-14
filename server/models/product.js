@@ -4,7 +4,8 @@ const productSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
   price: { type: Number, required: true },
-  image: { type: String, required: true }, // Filename for the product image
+  count: { type: Number, required: true }, // New field for product count
+  images: [{ type: String, required: true }], // Change to an array for multiple images
   sellerEmail: { type: String, required: true }, // Seller's email
   createdAt: { type: Date, default: Date.now },
 });

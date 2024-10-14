@@ -35,7 +35,7 @@ const MarketTrends = () => {
             <th>Product Name</th>
             <th>Market Value</th>
             <th>Our Price</th>
-            <th>Date Added</th>
+            <th>Date</th>
             <th>Action</th>
           </tr>
         </thead>

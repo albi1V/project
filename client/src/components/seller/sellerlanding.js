@@ -3,6 +3,23 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import styles from './slrlan.module.css'; // Importing CSS module
 
+
+import add from '../../assets/slrfun/add.png';
+import checkord from '../../assets/slrfun/checkord.png';
+import comp from '../../assets/slrfun/comp.png';
+
+import blog1 from '../../assets/blog_images/blog1.jpg';
+import blog2 from '../../assets/blog_images/blog2.jpg';
+import blog3 from '../../assets/blog_images/blog3.jpg';
+
+import card1 from '../../assets/card_images/card1.jpg';
+import card2 from '../../assets/card_images/card2.jpg';
+import card3 from '../../assets/card_images/card3.png';
+import card4 from '../../assets/card_images/card4.jpg';
+import card5 from '../../assets/card_images/card5.jpg';
+
+
+
 const SellerLanding = () => {
   const [userData, setUserData] = useState(null); // Store user data
   const [loading, setLoading] = useState(true);   // Loading state
@@ -99,15 +116,15 @@ const SellerLanding = () => {
       {/* Cards Section */}
       <section className={styles.cardSection}>
           <div className={styles.card} onClick={() => navigate('/add-products')}>
-            <img src="path/to/image1.jpg" alt="Add Post" className={styles.cardImage} />
+            <img src={add} alt="Add Post" className={styles.cardImage} />
             <h2>ADD PRODUCT</h2>
           </div>
           <div className={styles.card} onClick={() => console.log('Card 2 clicked')}>
-            <img src="path/to/image2.jpg" alt="Check Products" className={styles.cardImage} />
+            <img src={checkord}alt="Check Products" className={styles.cardImage} />
             <h2>CHECK ORDERS</h2>
           </div>
           <div className={styles.card} onClick={() => console.log('Card 3 clicked')}>
-            <img src="path/to/image3.jpg" alt="Whats New" className={styles.cardImage} />
+            <img src={comp} alt="Whats New" className={styles.cardImage} />
             <h2>COMPLINTS</h2>
           </div>
           {/* <div className={styles.card} onClick={() => console.log('Card 4 clicked')}>
@@ -121,17 +138,17 @@ const SellerLanding = () => {
         <h2 className={styles.blogTitle}>Latest Blogs</h2>
         <div className={styles.blogList}>
           <div className={styles.blogCard}>
-            <img src="path/to/blog-image1.jpg" alt="Blog 1" className={styles.blogImage} />
+            <img src={blog1} alt="Blog 1" className={styles.blogImage} />
             <h3>How to Improve Crop Yield</h3>
             <p>Discover top tips for increasing your farm’s crop yield.</p>
           </div>
           <div className={styles.blogCard}>
-            <img src="path/to/blog-image2.jpg" alt="Blog 2" className={styles.blogImage} />
+            <img src={blog2} alt="Blog 2" className={styles.blogImage} />
             <h3>Organic Farming Techniques</h3>
             <p>Learn the basics of organic farming and sustainable practices.</p>
           </div>
           <div className={styles.blogCard}>
-            <img src="path/to/blog-image3.jpg" alt="Blog 3" className={styles.blogImage} />
+            <img src={blog3} alt="Blog 3" className={styles.blogImage} />
             <h3>Latest Trends in Agriculture</h3>
             <p>Explore the new technologies shaping the future of agriculture.</p>
           </div>
@@ -143,24 +160,20 @@ const SellerLanding = () => {
         <h2 className={styles.productsTitle}>Latest Products</h2>
         <div className={styles.productsContainer}>
           <div className={styles.productCard}>
-            <img src="path/to/product1.jpg" alt="Product 1" className={styles.productImage} />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
+            <img src={card1} alt="Product 1" className={styles.productImage} />
+            <h3>New seeds availabe</h3>
+            <p>Easy to farm seeds are availabe </p>
+          </div>
+
+          <div className={styles.productCard}>
+            <img src={card3} alt="Product 3" className={styles.productImage} />
+            <h3>Weather can predict </h3>
+            <p>New technology can help to predict the weather </p>
           </div>
           <div className={styles.productCard}>
-            <img src="path/to/product2.jpg" alt="Product 2" className={styles.productImage} />
-            <h3>Product 2</h3>
-            <p>Description of Product 2</p>
-          </div>
-          <div className={styles.productCard}>
-            <img src="path/to/product3.jpg" alt="Product 3" className={styles.productImage} />
-            <h3>Product 3</h3>
-            <p>Description of Product 3</p>
-          </div>
-          <div className={styles.productCard}>
-            <img src="path/to/product4.jpg" alt="Product 4" className={styles.productImage} />
-            <h3>Product 4</h3>
-            <p>Description of Product 4</p>
+            <img src={card4} alt="Product 4" className={styles.productImage} />
+            <h3>help of drons </h3>
+            <p>Drones help to change the way off farming</p>
           </div>
         </div>
       </section>

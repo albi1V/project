@@ -38,11 +38,13 @@ const ViewBlogs = () => {
       ) : (
         blogs.map((blog) => (
           <div key={blog._id} className={styles.blogItem}>
+            
+            <p><strong>Date:</strong> {new Date(blog.createdAt).toLocaleDateString()}</p>
             <h2>{blog.title}</h2>
             <p>{blog.content}</p>
             {blog.image && <img src={`http://localhost:5000/api/blog/get-blog-images/${blog.image}`} alt={blog.title} />}
-            <p><strong>Posted by:</strong> {blog.userId} {/* You can display the user or fetch more user details */}</p>
-            <p><strong>Date:</strong> {new Date(blog.createdAt).toLocaleDateString()}</p>
+            {/* <p><strong>Posted by:</strong> {blog.userId} </p> */}
+            
           </div>
         ))
       )}

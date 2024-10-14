@@ -20,6 +20,7 @@ import ViewBlogs from './components/farmer/viewblog';
 import EditBlog from './components/farmer/editBlog';
 import EditProduct from './components/seller/editproduct';
 import ViewAllProducts from './components/products/viewallproducts';
+import ProductDetails from './components/products/productdetails';
 import Cart from './components/farmer/cart';
 import ReqWaste from './components/farmer/requestforwaste';
 import ReqHeMade from './components/farmer/requestHemade';
@@ -36,6 +37,8 @@ import FarmerViewSchemes from './components/admin/fmrviewscheme';
 import WasteRequest from './components/admin/wasterequest';
 import TrendAdd from './components/admin/trendadd';
 import TendPurch from './components/admin/tendPurchReq';
+import AdminUserControle from './components/admin/userControle';
+
 
 const App = () => {
   return (
@@ -69,6 +72,7 @@ const App = () => {
           <Route path="/seller-profile" element={<Sellerprofile />}/>
           <Route path="/edit-product/:productId" element={<EditProduct/>} />
           <Route path="/view-all-products" element={<ViewAllProducts/>} />
+          <Route path="/productDetails/:id" element={<ProductDetails />} />
           
           <Route path="/adminlan" element={<AdminLan />} />
           <Route path="/addscheme" element={<AddScheme />} />
@@ -77,6 +81,7 @@ const App = () => {
           <Route path="/WasteRequest" element={<WasteRequest />} />
           <Route path="/trendadd" element={<TrendAdd/>} /> 
           <Route path="/tendpurch" element={<TendPurch/>} /> 
+          <Route path="/user-controle" element={<AdminUserControle />} />
 
 
         </Routes>

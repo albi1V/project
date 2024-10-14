@@ -3,6 +3,30 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import styles from './frl.module.css'; // Importing CSS module
 
+
+import addb from '../../assets/farln/addb.png';
+import checkp from '../../assets/farln/checkp.png';
+import reqm from '../../assets/farln/reqm.png';
+import scheme from '../../assets/farln/scheme.png';
+import trend from '../../assets/farln/trend.png';
+import viewb from '../../assets/farln/viewb.png';
+import waste from '../../assets/farln/waste.png';
+
+
+
+
+import blog1 from '../../assets/blog_images/blog1.jpg';
+import blog2 from '../../assets/blog_images/blog2.jpg';
+import blog3 from '../../assets/blog_images/blog3.jpg';
+
+import card1 from '../../assets/card_images/card1.jpg';
+import card2 from '../../assets/card_images/card2.jpg';
+import card3 from '../../assets/card_images/card3.png';
+import card4 from '../../assets/card_images/card4.jpg';
+import card5 from '../../assets/card_images/card5.jpg';
+
+
+
 const FarmerLanding = () => {
   const [userData, setUserData] = useState(null); // Store user data
   const [loading, setLoading] = useState(true);   // Loading state
@@ -103,51 +127,51 @@ const FarmerLanding = () => {
       {/* Cards Section */}
       <section className={styles.cardSection}>
           <div className={styles.card} onClick={() => navigate('/add-blog')}>
-            <img src="path/to/image1.jpg" alt="Add Post" className={styles.cardImage} />
+            <img src={addb} alt="Add Post" className={styles.cardImage} />
             <h2>ADD POST</h2>
           </div>
           <div className={styles.card} onClick={() => navigate('/view-all-products')}>
-            <img src="path/to/image2.jpg" alt="Check Products" className={styles.cardImage} />
+            <img src={checkp} alt="Check Products" className={styles.cardImage} />
             <h2>CHECK PRODUCTS</h2>
           </div>
           <div className={styles.card} onClick={() => navigate('/view-all-blogs')}>
-            <img src="path/to/image2.jpg" alt="Check Products" className={styles.cardImage} />
+            <img src={viewb} alt="Check Products" className={styles.cardImage} />
             <h2>VIEW BLOG</h2>
           </div>
           <div className={styles.card} onClick={() => navigate('/FarmerViewSchemes')}>
-            <img src="path/to/image3.jpg" alt="New Schemes" className={styles.cardImage} />
+            <img src={scheme} alt="New Schemes" className={styles.cardImage} />
             <h2>NEW SCHEMES</h2>
           </div>
           <div className={styles.card} onClick={() => navigate('/request-for-waste')}>
-            <img src="path/to/image4.jpg" alt="Manage Waste" className={styles.cardImage} />
+            <img src={waste} alt="Manage Waste" className={styles.cardImage} />
             <h2>MANAGE WASTE</h2>
           </div>
           <div className={styles.card} onClick={() => navigate('/requestHemade')}>
-            <img src="path/to/image4.jpg" alt="Request He made" className={styles.cardImage} />
+            <img src={reqm} alt="Request He made" className={styles.cardImage} />
             <h2>REQUEST MADE</h2>
           </div>
           <div className={styles.card} onClick={() => navigate('/trendview')}>
-            <img src="path/to/image4.jpg" alt="Manage Waste" className={styles.cardImage} />
+            <img src={trend} alt="Manage Waste" className={styles.cardImage} />
             <h2>CURRENT TREND</h2>
           </div>
         </section>
 
-      {/* Blog Section */}
-      <section className={styles.blogSection}>
+{/* Blog Section */}
+<section className={styles.blogSection}>
         <h2 className={styles.blogTitle}>Latest Blogs</h2>
         <div className={styles.blogList}>
           <div className={styles.blogCard}>
-            <img src="path/to/blog-image1.jpg" alt="Blog 1" className={styles.blogImage} />
+            <img src={blog1} alt="Blog 1" className={styles.blogImage} />
             <h3>How to Improve Crop Yield</h3>
             <p>Discover top tips for increasing your farm’s crop yield.</p>
           </div>
           <div className={styles.blogCard}>
-            <img src="path/to/blog-image2.jpg" alt="Blog 2" className={styles.blogImage} />
+            <img src={blog2} alt="Blog 2" className={styles.blogImage} />
             <h3>Organic Farming Techniques</h3>
             <p>Learn the basics of organic farming and sustainable practices.</p>
           </div>
           <div className={styles.blogCard}>
-            <img src="path/to/blog-image3.jpg" alt="Blog 3" className={styles.blogImage} />
+            <img src={blog3} alt="Blog 3" className={styles.blogImage} />
             <h3>Latest Trends in Agriculture</h3>
             <p>Explore the new technologies shaping the future of agriculture.</p>
           </div>
@@ -159,24 +183,20 @@ const FarmerLanding = () => {
         <h2 className={styles.productsTitle}>Latest Products</h2>
         <div className={styles.productsContainer}>
           <div className={styles.productCard}>
-            <img src="path/to/product1.jpg" alt="Product 1" className={styles.productImage} />
-            <h3>Product 1</h3>
-            <p>Description of Product 1</p>
+            <img src={card1} alt="Product 1" className={styles.productImage} />
+            <h3>New seeds availabe</h3>
+            <p>Easy to farm seeds are availabe </p>
+          </div>
+
+          <div className={styles.productCard}>
+            <img src={card3} alt="Product 3" className={styles.productImage} />
+            <h3>Weather can predict </h3>
+            <p>New technology can help to predict the weather </p>
           </div>
           <div className={styles.productCard}>
-            <img src="path/to/product2.jpg" alt="Product 2" className={styles.productImage} />
-            <h3>Product 2</h3>
-            <p>Description of Product 2</p>
-          </div>
-          <div className={styles.productCard}>
-            <img src="path/to/product3.jpg" alt="Product 3" className={styles.productImage} />
-            <h3>Product 3</h3>
-            <p>Description of Product 3</p>
-          </div>
-          <div className={styles.productCard}>
-            <img src="path/to/product4.jpg" alt="Product 4" className={styles.productImage} />
-            <h3>Product 4</h3>
-            <p>Description of Product 4</p>
+            <img src={card4} alt="Product 4" className={styles.productImage} />
+            <h3>help of drons </h3>
+            <p>Drones help to change the way off farming</p>
           </div>
         </div>
       </section>

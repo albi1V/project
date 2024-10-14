@@ -9,6 +9,7 @@ const SellerProfile = () => {
   const [loading, setLoading] = useState(true);   // Loading state
   const [productError, setProductError] = useState(''); // Error state for products
   const [deletingProductId, setDeletingProductId] = useState(null); // Track which product is being deleted
+  const [currentImageIndex, setCurrentImageIndex] = useState({}); // Track current image index for each product
   const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
@@ -44,11 +45,17 @@ const SellerProfile = () => {
           setUserProducts([]); // No products found, set empty array
         } else {
           setUserProducts(productsResponse.data); // Store the user's products
+          // Initialize current image index for each product
+          const initialIndexes = productsResponse.data.reduce((acc, product) => {
+            acc[product._id] = 0; // Start with the first image for each product
+            return acc;
+          }, {});
+          setCurrentImageIndex(initialIndexes);
         }
 
         setLoading(false);
       } catch (error) {
-        setProductError('Failed to fetch products you add products'); // Handle error if fetching fails
+        setProductError('Failed to fetch products. Please add products.'); // Handle error if fetching fails
         setLoading(false);
       }
     };
@@ -70,10 +77,20 @@ const SellerProfile = () => {
       // Remove the deleted product from the state
       setUserProducts((prevProducts) => prevProducts.filter((product) => product._id !== productId));
       setDeletingProductId(null); // Reset deleting product ID
+      const { [productId]: removed, ...rest } = currentImageIndex; // Remove deleted product's image index
+      setCurrentImageIndex(rest);
     } catch (error) {
       setProductError('Failed to delete product');
       setDeletingProductId(null);
     }
+  };
+
+  const handleNextImage = (productId) => {
+    setCurrentImageIndex((prev) => {
+      const product = userProducts.find((prod) => prod._id === productId);
+      const nextIndex = (prev[productId] + 1) % (product.images.length || 1); // Loop through images
+      return { ...prev, [productId]: nextIndex };
+    });
   };
 
   if (loading) {
@@ -120,14 +137,27 @@ const SellerProfile = () => {
               {userProducts.map((product) => (
                 <div key={product._id} className={styles.productItem}>
                   <h3>{product.name}</h3>
-                  <p>{product.description}</p>
-                  {product.image && (
-                    <img
-                      src={`http://localhost:5000/api/products/get-product-images/${product.image}`}
-                      alt={product.name}
-                    />
-                  )}
-                  <p><strong>Price:</strong> ${product.price}</p>
+                  {/* <p>{product.description}</p> */}
+                  
+                  <div className={styles.imageContainer}>
+                    {product.images && product.images.length > 0 && (
+                      <>
+                        <img
+                          src={`http://localhost:5000/api/products/get-product-images/${product.images[currentImageIndex[product._id]]}`}
+                          alt={product.name}
+                          className={styles.productImage}
+                        />
+                        <button
+                          className={styles.nextButton}
+                          onClick={() => handleNextImage(product._id)}
+                        >
+                          Next
+                        </button>
+                      </>
+                    )}
+                  </div>
+                  
+                  <p><strong>Price:</strong> ₹{product.price}</p>
                   <p><strong>Posted on:</strong> {new Date(product.createdAt).toLocaleDateString()}</p>
 
                   {/* Edit Button for Navigating to EditProduct Page */}

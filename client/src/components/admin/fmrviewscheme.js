@@ -42,6 +42,17 @@ const FarmerViewSchemes = () => {
                 <p>{scheme.description}</p>
                 <p><strong>Start Date:</strong> {new Date(scheme.startDate).toLocaleDateString()}</p>
                 <p><strong>End Date:</strong> {new Date(scheme.endDate).toLocaleDateString()}</p>
+                <p>
+              {scheme.file && (
+                scheme.file.endsWith('.pdf') ? (
+                  <a href={`http://localhost:5000/api/schemes/get-scheme-files/${scheme.file}`} target="_blank" rel="noopener noreferrer">
+                    Download {scheme.name} document
+                  </a>
+                ) : (
+                  <img src={`http://localhost:5000/api/schemes/get-scheme-files/${scheme.file}`} alt={scheme.name} />
+                )
+              )}
+            </p>
               </div>
 
               {/* Button to open scheme link */}

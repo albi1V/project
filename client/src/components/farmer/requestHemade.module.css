@@ -1,28 +1,71 @@
+/* Dashboard Container */
 .dashboardContainer {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .requestsTable {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .requestsTable th,
-  .requestsTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  .requestsTable th {
-    background-color: #f4f4f4;
-  }
-  
-  p {
-    text-align: center;
-    font-size: 18px;
-    color: #888;
-  }
-  
+  max-width: 900px; /* Limit the width of the dashboard */
+  margin: 2rem auto; /* Center the dashboard */
+  padding: 2rem; /* Padding inside the container */
+  background-color: #ffffff; /* White background for clarity */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Heading Styles */
+.dashboardContainer h2 {
+  text-align: center; /* Center the heading */
+  font-size: 2rem; /* Increase the font size */
+  margin-bottom: 1.5rem; /* Space below the heading */
+  color: #2f8f2f; /* Green color for the heading */
+}
+
+/* Table Styles */
+.requestsTable {
+  width: 100%; /* Full width of the container */
+  border-collapse: collapse; /* Remove gaps between cells */
+  margin-top: 1rem; /* Space above the table */
+}
+
+/* Table Header Styles */
+.requestsTable thead {
+  background-color: #f2f2f2; /* Light gray background for header */
+}
+
+.requestsTable th {
+  padding: 1rem; /* Padding inside header cells */
+  font-size: 1.1rem; /* Slightly larger font for header */
+  color: #333; /* Dark color for text */
+  text-align: left; /* Align text to the left */
+  border-bottom: 2px solid #2f8f2f; /* Bottom border for header */
+}
+
+/* Table Body Styles */
+.requestsTable tbody tr {
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.requestsTable tbody tr:hover {
+  background-color: #f9f9f9; /* Light background on hover */
+}
+
+.requestsTable td {
+  padding: 1rem; /* Padding inside cells */
+  font-size: 1rem; /* Regular font size for cells */
+  color: #555; /* Dark gray for text */
+  border-bottom: 1px solid #ddd; /* Bottom border for rows */
+}
+
+/* Link Styles for Images */
+.requestsTable a {
+  color: #2f8f2f; /* Green color for links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.requestsTable a:hover {
+  text-decoration: underline; /* Underline on hover for emphasis */
+}
+
+/* No Requests Message */
+.dashboardContainer p {
+  text-align: center; /* Center the message */
+  font-size: 1.2rem; /* Larger font size for emphasis */
+  color: #777; /* Light gray color for text */
+  margin-top: 2rem; /* Space above the message */
+}

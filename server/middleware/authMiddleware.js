@@ -1,52 +1,51 @@
-
-
 const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 
 const authMiddleware = async (req, res, next) => {
-  
   try {
-    // Check if the authorization header is present
+    // Check if the authorization header exists
     const authHeader = req.headers.authorization;
     if (!authHeader) {
-      return res.status(401).json({ message: 'Authorization header is required.' });
+      return res.status(401).json({ message: 'Authorization header is missing. Please provide a token.' });
     }
 
-    // Extract the token from the header (assumes "Bearer <token>")
+    // Ensure the token is in the format "Bearer <token>"
     const token = authHeader.split(' ')[1];
     if (!token) {
-      return res.status(401).json({ message: 'Bearer token is required.' });
+      return res.status(401).json({ message: 'Authorization token is missing.' });
     }
 
     // Verify the JWT token
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    // Fetch the user from the database using the decoded ID
+    // Find the user by decoded ID
     const user = await User.findById(decoded.id);
-    
-    // Check if user exists
+
     if (!user) {
       return res.status(404).json({ message: 'User not found.' });
     }
 
-    // Attach the user and userId to the request object
-    req.user = user; // Attach full user object
-    req.userId = user._id; // Attach just the user ID
+    // Check if the user is blocked
+    if (user.isBlocked) {
+      return res.status(403).json({ message: 'Your account is blocked. Please contact the administrator.' });
+    }
 
-    // Continue to the next middleware or route
-    next();
+    // Attach user and user ID to request object
+    req.user = user;
+    req.userId = user._id;
+
+    next(); // Proceed to next middleware or route
   } catch (error) {
     // Handle token-related errors
     if (error.name === 'TokenExpiredError') {
-      return res.status(401).json({ message: 'Your session has expired. Please log in again.' });
-    }
-    if (error.name === 'JsonWebTokenError') {
+      return res.status(401).json({ message: 'Token expired. Please log in again.' });
+    } else if (error.name === 'JsonWebTokenError') {
       return res.status(401).json({ message: 'Invalid token. Please provide a valid token.' });
+    } else {
+      // Handle other errors
+      console.error('Authentication error:', error.message);
+      return res.status(500).json({ message: 'Authentication failed. Please try again later.' });
     }
-
-    // Handle other errors (e.g., DB or server issues)
-    console.error('Authentication error:', error.message);
-    return res.status(500).json({ message: 'An error occurred during authentication. Please try again later.' });
   }
 };
 

@@ -93,21 +93,30 @@ exports.register = async (req, res) => {
   }
 };
 
-// User Login (Role is fetched from the database, no need to provide it in the request)
+
+
 exports.login = async (req, res) => {
   const { email, password } = req.body;
   const normalizedEmail = email.toLowerCase();
 
   try {
+    // Validate request body
     if (!email || !password) {
       return res.status(400).json({ message: "Email and password are required" });
     }
 
+    // Find the user by email
     const user = await User.findOne({ email: normalizedEmail });
     if (!user) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
 
+    // Check if the user is blocked
+    if (user.isBlocked) {
+      return res.status(403).json({ message: "Your account is blocked. Please contact admin." });
+    }
+
+    // Verify password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid credentials" });
@@ -125,6 +134,7 @@ exports.login = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
 
 // Forgot Password functionality
 exports.forgotPassword = async (req, res) => {
@@ -198,13 +208,16 @@ exports.googleLogin = async (req, res) => {
   const { token, email } = req.body;
 
   try {
+    // Verify the provided token
     const decodedToken = await admin.auth().verifyIdToken(token);
     if (!decodedToken) {
       return res.status(401).json({ message: "Unauthorized" });
     }
 
+    // Find user in the database
     let user = await User.findOne({ email });
     if (!user) {
+      // If user does not exist, create a new one
       user = new User({
         email,
         username: decodedToken.name || "Google User",
@@ -214,16 +227,24 @@ exports.googleLogin = async (req, res) => {
       await user.save();
     }
 
+    // Check if the user is blocked
+    if (user.isBlocked) {
+      return res.status(403).json({ message: "Your account is blocked. Please contact the administrator." });
+    }
+
+    // Generate a token for the application
     const appToken = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, {
       expiresIn: '1h',
     });
 
-    res.json({ token: appToken, role: user.role, email: user.email });
+    // Respond with the token and user details
+    res.json({ token: appToken, role: user.role, email: user.email, isBlocked: user.isBlocked });
   } catch (error) {
     console.error("Error during Google login:", error);
     res.status(500).json({ message: "Server error" });
   }
 };
+
 
 
 

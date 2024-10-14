@@ -7,10 +7,16 @@ const AddProduct = () => {
   const [productName, setProductName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
-  const [image, setImage] = useState(null); // For file upload
+  const [productCount, setProductCount] = useState(''); // New state for product count
+  const [images, setImages] = useState([]); // For multiple file uploads
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const handleImageChange = (e) => {
+    const files = Array.from(e.target.files);
+    setImages(files); // Update state with selected files
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,7 +37,10 @@ const AddProduct = () => {
       formData.append('name', productName);
       formData.append('description', description);
       formData.append('price', price);
-      formData.append('image', image); // Image file upload
+      formData.append('count', productCount); // Include product count
+      images.forEach((image) => {
+        formData.append('images', image); // Append each image file
+      });
       formData.append('sellerEmail', email); // Attach the seller's email
 
       // API call to add the product
@@ -41,7 +50,7 @@ const AddProduct = () => {
           'Content-Type': 'multipart/form-data',
         },
       });
-      
+
       setLoading(false);
       navigate('/seller-landing'); // Redirect to Seller Landing after product addition
     } catch (error) {
@@ -84,10 +93,22 @@ const AddProduct = () => {
         </div>
 
         <div className={styles.formGroup}>
-          <label>Product Image</label>
+          <label>Product Count</label>
+          <input
+            type="number"
+            value={productCount}
+            onChange={(e) => setProductCount(e.target.value)}
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Product Images (max 3)</label>
           <input
             type="file"
-            onChange={(e) => setImage(e.target.files[0])}
+            multiple
+            onChange={handleImageChange}
+            accept="image/*"
             required
           />
         </div>

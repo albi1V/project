@@ -1,46 +1,194 @@
+/* Container for the entire page */
 .productsContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .productGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
-  
-  .productItem {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-  }
-  
-  .productImage {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .cartButton, .buyButton {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .cartButton:hover, .buyButton:hover {
-    background-color: #45a049;
-  }
-  
+  padding: 40px;
+  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Search container for input and button */
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* Search input styling */
+.searchInput {
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  width: 300px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Search button styling */
+.searchButton {
+  padding: 12px 30px;
+  margin-left: 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #0056b3;
+}
+
+/* Grid layout for the products */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+/* Each product item styling */
+.productItem {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  min-height: 450px; /* Prevent resizing */
+  overflow: hidden;
+}
+
+.productItem:hover {
+  transform: translateY(-5px);
+}
+
+/* Product title */
+.productItem h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Product description */
+.productItem p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* Image container */
+.imageContainer {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.productImage {
+  width: 100%; /* Keep width dynamic */
+  height: 200px; /* Static height to prevent resizing */
+  object-fit: cover; /* Maintain aspect ratio while covering the area */
+  border-radius: 10px;
+}
+
+/* Button for cycling through images */
+.nextButton {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px; /* Increase font size for visibility */
+}
+
+.nextButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Use a basic icon for the next button */
+.nextButton::before {
+  content: '→'; /* Basic right arrow */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Price and posted date styling */
+.productItem strong {
+  display: block;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Add to Cart Button */
+.cartButton {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.cartButton:hover {
+  background-color: #218838;
+}
+
+/* Buy Now Button */
+.buyButton {
+  background-color: #ffc107;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.buyButton:hover {
+  background-color: #e0a800;
+}
+
+/* Loading and error message styling */
+.loading, .error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ff3333;
+}

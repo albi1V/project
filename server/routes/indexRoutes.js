@@ -8,6 +8,7 @@ const schemeRoutes = require('./schemeRoutes');
 const wasteRoutes = require('./wasteRoutes');
 const trendRoutes = require('./trendRoutes')
 const trendSellRoutes = require('./trendSellRoutes')
+const userControleRoutes = require('./userControleRoutes')
 
 
             
@@ -27,6 +28,7 @@ router.use('/trend',trendRoutes)
 
 router.use('/trendsell',trendSellRoutes)
 
+router.use('/usercontrole',userControleRoutes)
 
 
 module.exports = router;

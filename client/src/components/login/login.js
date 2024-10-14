@@ -20,17 +20,15 @@ const LoginPage = () => {
       // Destructure role from the backend response
       const { token, role: userRole, email: userEmail } = response.data;
   
-      // Store token and email in localStorage
       localStorage.setItem('token', token);
-      localStorage.setItem('email', userEmail); // Store email to fetch user-specific data later
-  
-      // Redirect based on role
+      localStorage.setItem('email', userEmail);
+
       if (userRole === 'farmer') {
         navigate('/farmer-landing');
       } else if (userRole === 'seller') {
         navigate('/seller-landing');
       }else if (userRole === 'admin') {
-        navigate('/adminlan');  // Redirect admin to their page
+        navigate('/adminlan');  
       }
 
     } catch (error) {
@@ -41,11 +39,11 @@ const LoginPage = () => {
 
 
  // Function to handle sign-in with Google
- const handleGoogleSignIn = async () => {
+const handleGoogleSignIn = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
-    const idToken = await user.getIdToken();  // Get Firebase ID token
+    const idToken = await user.getIdToken(); // Get Firebase ID token
 
     // Send token and email to your backend
     const response = await axios.post('http://localhost:5000/api/auth/google-login', {
@@ -53,20 +51,46 @@ const LoginPage = () => {
       email: user.email,
     });
 
-    const { token, role: userRole, email: userEmail } = response.data;
+    const { token, role: userRole, email: userEmail, isBlocked } = response.data;
+
+    if (isBlocked) {
+      setErrorMessage("Your account is blocked. Please contact the administrator.");
+      return; // Stop further execution
+    }
+
     localStorage.setItem('token', token);
     localStorage.setItem('email', userEmail);
 
-    if (userRole === 'farmer') {
-      navigate('/farmer-landing');
-    } else if (userRole === 'seller') {
-      navigate('/seller-landing');
+    // Navigate based on user role
+    switch (userRole) {
+      case 'farmer':
+        navigate('/farmer-landing');
+        break;
+      case 'seller':
+        navigate('/seller-landing');
+        break;
+      case 'admin':
+        navigate('/admin-landing'); // Example for admin role
+        break;
+      default:
+        setErrorMessage("User role is not recognized.");
     }
   } catch (error) {
-    setErrorMessage("Google sign-in failed. Please try again.");
+    // Enhance error handling
+    if (error.response) {
+      // Server responded with a status other than 200 range
+      setErrorMessage(`Error: ${error.response.data.message || "Google sign-in failed. Please try again."}`);
+    } else if (error.request) {
+      // The request was made but no response was received
+      setErrorMessage("No response from server. Please check your connection.");
+    } else {
+      // Something happened in setting up the request
+      setErrorMessage(`Error: ${error.message}`);
+    }
     console.error("Error during Google sign-in:", error);
   }
 };
+
   
   
 

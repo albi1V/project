@@ -22,9 +22,7 @@ const UserEntry = () => {
     navigate('/register');
   };
 
-  const handleAdminLoginClick = () => {
-    navigate('/admin-login'); // Navigate to the Admin login page
-  };
+ 
 
   // Inline Styles
   const headerStyle = {
@@ -210,13 +208,7 @@ const blogTextStyle = {
           >
             Register
           </button>
-          {/* Admin Login Button */}
-          <button
-            onClick={handleAdminLoginClick}
-            style={buttonStyle}
-          >
-            Admin Login
-          </button>
+
         </div>
       </header>
 

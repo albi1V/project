@@ -14,6 +14,11 @@ const AddScheme = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  // Get tomorrow's date in YYYY-MM-DD format
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const minDate = tomorrow.toISOString().split('T')[0];
+
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
@@ -96,6 +101,7 @@ const AddScheme = () => {
             value={startDate}
             onChange={(e) => setStartDate(e.target.value)}
             required
+            min={minDate} // Set minimum date to tomorrow
           />
         </label>
         <label>
@@ -105,6 +111,7 @@ const AddScheme = () => {
             value={endDate}
             onChange={(e) => setEndDate(e.target.value)}
             required
+            min={startDate || minDate} // Set minimum date to the selected start date or tomorrow
           />
         </label>
         <label>
@@ -129,14 +136,14 @@ const AddScheme = () => {
       </form>
 
       {/* Display link to the uploaded file after submission */}
-      {uploadedFileUrl && (
+      {/* {uploadedFileUrl && (
         <div className={styles.fileLink}>
           <h3>Uploaded Document:</h3>
           <a href={uploadedFileUrl} target="_blank" rel="noopener noreferrer">
             View Document
           </a>
         </div>
-      )}
+      )} */}
     </div>
   );
 };

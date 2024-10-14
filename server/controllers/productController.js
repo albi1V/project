@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
     cb(null, Date.now() + path.extname(file.originalname)); // Unique filename with timestamp
   },
 });
-const upload = multer({ storage: storage }).single('image');
+const upload = multer({ storage: storage }).array('images', 3); // Change to handle multiple files
 
 // Controller to add a product
 const addProduct = async (req, res) => {
@@ -29,9 +29,9 @@ const addProduct = async (req, res) => {
     }
 
     try {
-      const { name, description, price } = req.body;
+      const { name, description, price, count } = req.body;
       const sellerEmail = req.body.sellerEmail; // Pulled from request body or JWT token
-      const image = req.file ? req.file.filename : null; // Check if an image file was uploaded
+      const images = req.files.map(file => file.filename); // Collect filenames of uploaded images
 
       // Create a new product document
       const newProduct = new Product({
@@ -39,7 +39,8 @@ const addProduct = async (req, res) => {
         name,
         description,
         price,
-        image,
+        count,
+        images, // Store multiple images
       });
 
       // Save the product in the database
@@ -52,6 +53,9 @@ const addProduct = async (req, res) => {
     }
   });
 };
+
+// ... other controllers remain unchanged
+
 
 // Controller to get products posted by a specific user (seller)
 const getUserProducts = async (req, res) => {

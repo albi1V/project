@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
   username: {
@@ -38,6 +37,10 @@ const userSchema = new mongoose.Schema({
   resetPasswordExpires: {
     type: Date,
   },
+  isBlocked: {
+    type: Boolean,
+    default: false,  // Add this field for block/unblock status
+  }
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', userSchema);

@@ -7,7 +7,7 @@ const ViewAllProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [cart, setCart] = useState([]); // Track cart items
+  const [currentImageIndex, setCurrentImageIndex] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,6 +15,13 @@ const ViewAllProducts = () => {
       try {
         const response = await axios.get('http://localhost:5000/api/products/all');
         setProducts(response.data);
+
+        const initialIndexes = response.data.reduce((acc, product) => {
+          acc[product._id] = 0;
+          return acc;
+        }, {});
+        setCurrentImageIndex(initialIndexes);
+
         setLoading(false);
       } catch (error) {
         setError('Failed to fetch products');
@@ -28,7 +35,7 @@ const ViewAllProducts = () => {
   const handleAddToCart = async (productId) => {
     const token = localStorage.getItem('token');
     const quantity = 1; // Default quantity
-  
+
     try {
       const response = await axios.post(
         'http://localhost:5000/api/cart/addcart',
@@ -37,18 +44,28 @@ const ViewAllProducts = () => {
           headers: { Authorization: `Bearer ${token}` },
         }
       );
-  
-      console.log(response.data.message); // Display success message or notification
+
+      console.log(response.data.message);
     } catch (error) {
       console.error('Error adding to cart:', error);
     }
   };
-  
-  
 
   const handleBuyNow = (product) => {
-    // Directly navigate to the checkout page with product details
     navigate('/checkout', { state: { product } });
+  };
+
+  const handleViewMore = (product) => {
+    // Navigate to a detailed product page
+    navigate(`/productDetails/${product._id}`, { state: { product } });
+  };
+
+  const handleNextImage = (productId) => {
+    setCurrentImageIndex((prevIndex) => {
+      const product = products.find((product) => product._id === productId);
+      const nextIndex = (prevIndex[productId] + 1) % (product.images.length || 1);
+      return { ...prevIndex, [productId]: nextIndex };
+    });
   };
 
   if (loading) {
@@ -67,31 +84,40 @@ const ViewAllProducts = () => {
         {products.map((product) => (
           <div key={product._id} className={styles.productItem}>
             <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            {product.image && (
-              <img
-                src={`http://localhost:5000/api/products/get-product-images/${product.image}`}
-                alt={product.name}
-                className={styles.productImage}
-              />
-            )}
-            <p><strong>Price:</strong> ${product.price}</p>
-            <p><strong>Posted on:</strong> {new Date(product.createdAt).toLocaleDateString()}</p>
+            
 
-            {/* Add to Cart Button */}
-            <button
-              className={styles.cartButton}
-              onClick={() => handleAddToCart(product)}
-            >
+            <div className={styles.imageContainer}>
+              {product.images && product.images.length > 0 && (
+                <>
+                  <img
+                    src={`http://localhost:5000/api/products/get-product-images/${product.images[currentImageIndex[product._id]] || 0}`}
+                    alt={product.name}
+                    className={styles.productImage}
+                  />
+                  <button
+                    className={styles.nextButton}
+                    onClick={() => handleNextImage(product._id)}
+                  >
+                    
+                  </button>
+                </>
+              )}
+            </div>
+
+            <p><strong>Price:</strong> ₹{product.price}</p>
+            {/* <p><strong>Posted on:</strong> {new Date(product.createdAt).toLocaleDateString()}</p> */}
+
+            <button className={styles.cartButton} onClick={() => handleAddToCart(product._id)}>
               Add to Cart
             </button>
 
-            {/* Buy Now Button */}
-            <button
-              className={styles.buyButton}
-              onClick={() => handleBuyNow(product)}
-            >
+            <button className={styles.buyButton} onClick={() => handleBuyNow(product)}>
               Buy Now
+            </button>
+
+            {/* View More Button */}
+            <button className={styles.viewMoreButton} onClick={() => handleViewMore(product)}>
+              View More
             </button>
           </div>
         ))}

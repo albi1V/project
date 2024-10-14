@@ -49,6 +49,7 @@ const getCart = async (req, res) => {
   const userId = req.user._id;
 
   try {
+    // Fetch the cart for the user and populate the products
     const cart = await Cart.findOne({ user: userId }).populate('products.product');
 
     if (!cart) {
@@ -61,6 +62,7 @@ const getCart = async (req, res) => {
     return res.status(500).json({ message: 'Server error', error });
   }
 };
+
 
 // Remove product from cart
 const removeFromCart = async (req, res) => {
