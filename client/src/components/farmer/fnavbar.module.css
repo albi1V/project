@@ -1,0 +1,55 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Navbar background color */
+    color: white; /* Text color */
+  }
+  
+  .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    position: relative; /* Necessary for dropdown positioning */
+    cursor: pointer; /* Cursor indicates clickable area */
+  }
+  
+  .avatar {
+    width: 40px; /* Avatar width */
+    height: 40px; /* Avatar height */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between avatar and username */
+  }
+  
+  .username {
+    color: white; /* Username color */
+  }
+  
+  .dropdownMenu {
+    position: absolute; /* Position dropdown relative to parent */
+    top: 50px; /* Adjust based on your navbar height */
+    right: 0; /* Align dropdown to the right */
+    background-color: white; /* Dropdown background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+  
+  .dropdownItem {
+    display: block; /* Each item takes full width */
+    padding: 10px 20px; /* Padding for items */
+    color: black; /* Item text color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .dropdownItem:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Hover effect */
+  }
+  

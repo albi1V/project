@@ -1,0 +1,44 @@
+.adminLayout {
+  display: flex;
+  height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+.dashboardContent {
+  margin-top: 20px;
+}
+
+.dashboardContent {
+  padding: 20px;
+  flex: 1;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 200px; /* Makes cards responsive */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+}

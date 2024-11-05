@@ -1,0 +1,53 @@
+.sidebar {
+    position: sticky; /* Make sidebar sticky */
+    top: 0;          /* When it hits the top, stick there */
+    width: 250px;    /* Adjust width as needed */
+    background-color: #f8f8f8; /* Adjust background color */
+    height: auto;    /* Height will adjust automatically */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    z-index: 1000;   /* Ensure it's above other content */
+  }
+ 
+  
+  
+  .sidebar h2 {
+    font-size: 1.5rem; /* Larger font for farmer's name */
+    color: #4CAF50; /* Green color for highlighting */
+    font-weight: bold; /* Make it bold */
+    background-color: #e8f5e9; /* Light green background */
+    padding: 10px; /* Padding around the name */
+    text-align: center; /* Center the text */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below the name */
+  }
+  
+  .navList {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+  }
+  
+  .navList li {
+    margin: 10px 0; /* Space between items */
+    display: flex; /* Flexbox for icon and text alignment */
+    align-items: center;
+  }
+  
+  .navList a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark text color */
+    display: block; /* Block display for full clickable area */
+    padding: 10px; /* Padding for links */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
+  }
+  
+  .navList a:hover {
+    background-color: #ddd; /* Change background on hover */
+  }
+  
+  .navList .icon {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2rem; /* Adjust icon size */
+    color: #4CAF50; /* Icon color to match the farmer's name */
+  }
+  

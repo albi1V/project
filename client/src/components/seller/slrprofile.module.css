@@ -1,0 +1,191 @@
+/* Main container for the seller profile */
+.mainContent {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children vertically */
+  height: 100vh; /* Full height */
+}
+
+.adminLayout {
+  display: flex; /* Use flexbox for sidebar and main content */
+  flex: 1; /* Allow it to take remaining space */
+}
+
+
+.profileContainer {
+  margin: 0 auto;
+  padding: 40px;
+  width: 100%;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Title styling */
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* User info section */
+.userInfo {
+  padding: 30px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.userInfo p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+}
+
+/* Edit button for user info */
+.editButton {
+  align-self: flex-start;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editButton:hover {
+  background-color: #218838;
+}
+
+/* Product section title */
+.productTitle {
+  font-size: 30px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Product list styling */
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual product card styling */
+.productItem {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.productItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.productItem h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.productItem p {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Product image with fixed size */
+.productItem img {
+  width: 240px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* Action buttons: delete and edit */
+.deleteButton,
+.editButton {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.deleteButton {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.editButton {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.editButton:hover {
+  background-color: #0056b3;
+}
+
+/* Loading and error messages */
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+}
+
+.loading {
+  color: #007bff;
+}
+
+.error {
+  color: #dc3545;
+}
+
+/* Add product button */
+.addButton {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}

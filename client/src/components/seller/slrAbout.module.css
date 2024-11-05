@@ -1,0 +1,18 @@
+/* SuggestionPage.module.css */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.adminLayout {
+    display: flex;
+    width: 100%;
+}
+
+.contentContainer {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+}

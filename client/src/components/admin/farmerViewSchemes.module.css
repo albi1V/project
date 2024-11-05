@@ -1,0 +1,65 @@
+/* farmerViewSchemes.module.css */
+
+.mainContent {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children vertically */
+  height: 100vh; /* Full height */
+}
+
+.adminLayout {
+  display: flex; /* Use flexbox for sidebar and main content */
+  flex: 1; /* Allow it to take remaining space */
+}
+
+.schemeListContainer {
+  flex: 1; /* Main content area */
+  padding: 20px; /* Add padding around content */
+  overflow-y: auto; /* Allow vertical scrolling if necessary */
+  background-color: #f9f9f9; /* Background color */
+}
+
+.schemeList {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.schemeItem {
+  background-color: #ffffff; /* White background for scheme items */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 15px; /* Inner padding */
+  margin-bottom: 20px; /* Space between scheme items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.schemeDetails h3 {
+  margin: 0 0 10px; /* Space below scheme title */
+}
+
+.schemeLinkBtn {
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 10px; /* Space above button */
+}
+
+.schemeLinkBtn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.schemeDocument {
+  margin-top: 10px; /* Space above document section */
+}
+
+.schemeImage {
+  max-width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+}
+/* farmerViewSchemes.module.css */
+
+/* Make all <p> elements in schemeDetails black */
+.schemeDetails p {
+  color: black; /* Set text color to black */
+}
