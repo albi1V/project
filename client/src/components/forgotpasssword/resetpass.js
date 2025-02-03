@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom'; // for accessing token from URL
+import { useParams ,useNavigate } from 'react-router-dom'; // for accessing token from URL
 
 const ResetPasswordPage = () => {
-  const { token } = useParams(); // Access the token from the URL
+  const { token } = useParams();
+  const navigate = useNavigate();  // Access the token from the URL
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -20,6 +21,9 @@ const ResetPasswordPage = () => {
         password,
       });
       setMessage('Password reset successful. You can now log in.');
+      setTimeout(() => {
+        navigate('/login');
+      }, 1000);
     } catch (error) {
       setMessage('Error resetting password. Please try again.');
     }

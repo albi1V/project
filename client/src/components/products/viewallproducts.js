@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import Sidebar from '../farmer/fsidebar'; // Import Sidebar component
-import Navbar from '../farmer/fnavbar';   // Import Navbar component
-import styles from './valp.module.css'; // Import your CSS module for styling
+import Sidebar from '../farmer/fsidebar';
+import Navbar from '../farmer/fnavbar';
+import styles from './valp.module.css';
 
 const ViewAllProducts = () => {
   const [products, setProducts] = useState([]);
+  const [displayedProducts, setDisplayedProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(''); // For search input
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [currentImageIndex, setCurrentImageIndex] = useState({});
@@ -17,7 +19,9 @@ const ViewAllProducts = () => {
       try {
         const response = await axios.get('http://localhost:5000/api/products/all');
         setProducts(response.data);
+        setDisplayedProducts(response.data);
 
+        // Set initial image index for each product
         const initialIndexes = response.data.reduce((acc, product) => {
           acc[product._id] = 0;
           return acc;
@@ -34,6 +38,35 @@ const ViewAllProducts = () => {
     fetchProducts();
   }, []);
 
+  // Function to handle the search
+  const handleSearch = async () => {
+    if (!searchQuery) {
+      setDisplayedProducts(products); // Reset to all products if search is empty
+      return;
+    }
+
+    try {
+      const response = await axios.get(`http://localhost:5000/api/products/search`, {
+        params: { name: searchQuery },
+      });
+
+      const searchResults = response.data;
+
+      // Display searched products at the top, followed by others
+      const reorderedProducts = [
+        ...searchResults,
+        ...products.filter(
+          (product) => !searchResults.some((result) => result._id === product._id)
+        ),
+      ];
+
+      setDisplayedProducts(reorderedProducts);
+    } catch (error) {
+      console.error('Error during search', error);
+      setError('Search failed. Please try again.');
+    }
+  };
+
   const handleAddToCart = async (productId) => {
     const token = localStorage.getItem('token');
     const quantity = 1; // Default quantity
@@ -42,16 +75,13 @@ const ViewAllProducts = () => {
       const response = await axios.post(
         'http://localhost:5000/api/cart/addcart',
         { productId, quantity },
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
+        { headers: { Authorization: `Bearer ${token}` } }
       );
 
-      console.log(response.data.message);
-      window.alert("Product added to your cart"); // Alert for successful addition
+      window.alert('Product added to your cart');
     } catch (error) {
       console.error('Error adding to cart:', error);
-      window.alert("Failed to add product to your cart"); // Alert for failure
+      window.alert('Failed to add product to your cart');
     }
   };
 
@@ -81,16 +111,30 @@ const ViewAllProducts = () => {
 
   return (
     <div className={styles.mainContent}>
-      <Navbar /> {/* Navbar component */}
+      <Navbar />
 
       <div className={styles.adminLayout}>
-        <Sidebar /> {/* Sidebar component */}
+        <Sidebar />
 
         <div className={styles.productsContainer}>
           <h1 className={styles.title}>All Products</h1>
 
+          {/* Search bar */}
+          <div className={styles.searchBar}>
+            <input
+              type="text"
+              placeholder="Search for a product..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className={styles.searchInput}
+            />
+            <button onClick={handleSearch} className={styles.searchButton}>
+              Search
+            </button>
+          </div>
+
           <div className={styles.productGrid}>
-            {products.map((product) => (
+            {displayedProducts.map((product) => (
               <div key={product._id} className={styles.productItem}>
                 <h3>{product.name}</h3>
 

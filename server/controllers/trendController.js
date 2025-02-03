@@ -26,7 +26,7 @@ const addMarketTrend = async (req, res) => {
 // Get all market trends (Farmers)
 const getMarketTrends = async (req, res) => {
   try {
-    const trends = await MarketTrend.find();
+    const trends = await MarketTrend.find().sort({ date: -1 });;
     res.status(200).json(trends);
   } catch (error) {
     res.status(500).json({ message: 'Failed to fetch market trends', error });

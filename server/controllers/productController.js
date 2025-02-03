@@ -66,10 +66,6 @@ const addProduct = async (req, res) => {
   });
 };
 
-
-// ... other controllers remain unchanged
-
-
 // Controller to get products posted by a specific user (seller)
 const getUserProducts = async (req, res) => {
   try {
@@ -92,8 +88,6 @@ const getUserProducts = async (req, res) => {
     return res.status(500).json({ message: 'Server error', error });
   }
 };
-
-
 
 // Controller to fetch product images by filename
 const getProductImages = async (req, res) => {
@@ -142,7 +136,6 @@ const editProductById = async (req, res) => {
   });
 };
 
-
 //Controller to delete a product by ID
 const deleteProductById = async (req, res) => {
   try {
@@ -172,7 +165,6 @@ const deleteProductById = async (req, res) => {
 };
 
 // Controller to get a product by ID
-
 const getProductById = async (req, res) => {
   try {
     const { productId } = req.params;
@@ -192,7 +184,6 @@ const getProductById = async (req, res) => {
     return res.status(500).json({ message: 'Server error', error });
   }
 };
-
 
 const getAllProducts = async (req, res) => {
   try {
@@ -214,10 +205,6 @@ const getAllProducts = async (req, res) => {
 
 
 // Controller to check stock for a product by ID
-
-
-
-
 const checkStock = async (req, res) => {
   try {
     const { productId } = req.params;
@@ -242,8 +229,6 @@ const checkStock = async (req, res) => {
     return res.status(500).json({ message: 'Server error', error });
   }
 };
-
-
 
 // Controller to update stock for a product by ID
 const updateStock = async (req, res) => {
@@ -275,6 +260,35 @@ const updateStock = async (req, res) => {
   }
 };
 
+// Controller to search for products
+const getProductBySearch = async (req, res) => {
+  try {
+    console.log("Query parameter received:", req.query);
+    const { name } = req.query; // Get the search query from request query parameters
+
+    if (!name) {
+      return res.status(400).json({ message: 'Search query is required' });
+    }
+
+    // Use regular expressions for case-insensitive partial match in name or description
+    const products = await Product.find({
+      $or: [
+        { name: { $regex: name, $options: 'i' } },
+        { description: { $regex: name, $options: 'i' } }
+      ]
+    });
+
+    if (products.length === 0) {
+      return res.status(404).json({ message: 'No products found' });
+    }
+
+    return res.status(200).json(products);
+  } catch (error) {
+    console.error('Error searching products:', error);
+    return res.status(500).json({ message: 'Server error', error });
+  }
+};
+
 
 module.exports = {
   addProduct,
@@ -285,5 +299,6 @@ module.exports = {
   getProductById,
   getAllProducts,
   checkStock,
-  updateStock
+  updateStock,
+  getProductBySearch
 };

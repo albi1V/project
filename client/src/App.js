@@ -37,6 +37,8 @@ import ViewTrend from "./components/farmer/trendview";
 import ReqSell from "./components/farmer/trendReqForsell";
 import Checkout from "./components/products/checkout";
 import FmrViewOrder from "./components/farmer/fmrViewOrder";
+import PlantLocation from "./components/farmer/plantLocation";
+
 
 import AdminLan from "./components/admin/adminlan";
 import AddScheme from "./components/admin/scheme";
@@ -80,6 +82,9 @@ const App = () => {
           <Route path="/trendReqForsell" element={<ReqSell />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/fmrViewOrder" element={<FmrViewOrder />} />
+          <Route path="/plantLocation" element={<PlantLocation />} />
+
+          
 
 
           <Route path="/add-products" element={<AddProduct />} />

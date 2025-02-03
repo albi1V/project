@@ -10,6 +10,7 @@ const ForgotPasswordPage = () => {
     try {
       const response = await axios.post('http://localhost:5000/api/auth/forgot-password', { email });
       setMessage('Password reset link sent to your email.');
+      
     } catch (error) {
       setMessage('Error sending password reset link. Please try again.');
     }

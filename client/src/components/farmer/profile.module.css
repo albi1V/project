@@ -119,3 +119,11 @@
   font-size: 18px;
   color: #666;
 }
+/* Ensure blog images have the same size and aspect ratio */
+.blogItem img {
+  width: 100%;          /* Set image width to 100% of the container */
+  height: 200px;        /* Set a fixed height */
+  object-fit: cover;    /* Crop image to fit within the fixed size */
+  border-radius: 8px;   /* Optional: round the corners to match blog card style */
+  margin-bottom: 10px;  /* Space between the image and the content below */
+}

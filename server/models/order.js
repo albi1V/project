@@ -26,4 +26,5 @@ const orderSchema = new mongoose.Schema({
   },
 }, { timestamps: true });
 
-module.exports = mongoose.model('Order', orderSchema);
+// Check if the model is already compiled and reuse it if available
+module.exports = mongoose.models.Order || mongoose.model('Order', orderSchema);

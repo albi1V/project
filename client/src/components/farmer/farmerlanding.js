@@ -124,7 +124,7 @@ const FarmerLanding = () => {
       <section className={styles.cardSection}>
         <div className={styles.card} onClick={() => navigate("/add-blog")}>
           <img src={addb} alt="Add Post" className={styles.cardImage} />
-          <h2>ADD POST</h2>
+          <h2>ADD BLOG</h2>
         </div>
         <div
           className={styles.card}
@@ -169,6 +169,14 @@ const FarmerLanding = () => {
         >
           <img src={trend} alt="Manage Waste" className={styles.cardImage} />
           <h2>CURRENT TREND</h2>
+        </div>
+        <div
+          id="currentTrendCard"
+          className={styles.card}
+          onClick={() => navigate("/plantLocation")}
+        >
+          <img src={trend} alt="Manage Waste" className={styles.cardImage} />
+          <h2>PLANT</h2>
         </div>
 
         <div className={styles.card} onClick={() => navigate("/fmrViewOrder")}>

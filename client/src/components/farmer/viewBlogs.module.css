@@ -38,10 +38,13 @@ h2 {
 }
 
 img {
-  max-width: 100%; /* Responsive images */
-  height: auto; /* Maintain aspect ratio */
+  width: 75%; /* Full width */
+  height: 75%; /* Fixed height for a consistent ratio */
+  object-fit: cover; /* Ensure the image scales without distortion */
+  border-radius: 4px; /* Optional: rounded corners for style */
   margin-top: 10px; /* Space above image */
 }
+
 
 
 .blogContent {

@@ -13,6 +13,7 @@ const adminConsoleRoutes = require('./adminConsoleRoutes')
 const orderRoutes = require('./orderRoutes')
 const reportRoutes = require('./reportRoutes')
 const PaymentRoutes = require('./PaymentRoutes')
+const plantlocRoutes = require('./plantLocRoutes')
 
 
 
@@ -37,13 +38,12 @@ router.use('/usercontrole',userControleRoutes)
 
 router.use('/adminconsole',adminConsoleRoutes)
 
- router.use('/orders',orderRoutes)
+router.use('/orders',orderRoutes)
 
 router.use('/report',reportRoutes)
 
-
 router.use('/payment',PaymentRoutes)
 
-
+router.use('/plantlocation',plantlocRoutes)
 
 module.exports = router;

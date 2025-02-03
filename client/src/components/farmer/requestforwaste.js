@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Sidebar from '../farmer/fsidebar'; // Import Sidebar component
-import Navbar from '../farmer/fnavbar';   // Import Navbar component
+import Sidebar from '../farmer/fsidebar';
+import Navbar from '../farmer/fnavbar';
 import styles from './requestforwaste.module.css';
 
 const WasteManagementRequest = () => {
@@ -24,7 +24,6 @@ const WasteManagementRequest = () => {
   const [isSubmitEnabled, setIsSubmitEnabled] = useState(false);
 
   useEffect(() => {
-    // Check if all fields are valid to enable the submit button
     const isValid =
       !errors.userName &&
       !errors.address &&
@@ -70,7 +69,6 @@ const WasteManagementRequest = () => {
           setErrors((prev) => ({ ...prev, userName: '' }));
         }
         break;
-
       case 'address':
         if (/[^a-zA-Z0-9\s.,-]/.test(value) || /\s{2,}/.test(value)) {
           setErrors((prev) => ({ ...prev, address: 'Invalid characters or double spaces in address.' }));
@@ -78,7 +76,6 @@ const WasteManagementRequest = () => {
           setErrors((prev) => ({ ...prev, address: '' }));
         }
         break;
-
       case 'phone':
         if (!/^[6-9]\d{9}$/.test(value)) {
           setErrors((prev) => ({ ...prev, phone: 'Phone number must be 10 digits and start with 6, 7, 8, or 9.' }));
@@ -86,7 +83,6 @@ const WasteManagementRequest = () => {
           setErrors((prev) => ({ ...prev, phone: '' }));
         }
         break;
-
       case 'plasticCount':
       case 'metalWeight':
         if (value < 0) {
@@ -95,7 +91,6 @@ const WasteManagementRequest = () => {
           setErrors((prev) => ({ ...prev, [name]: '' }));
         }
         break;
-
       default:
         break;
     }
@@ -104,7 +99,6 @@ const WasteManagementRequest = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prepare form data for submission
     const formDataToSubmit = new FormData();
     formDataToSubmit.append('userName', formData.userName);
     formDataToSubmit.append('address', formData.address);
@@ -112,37 +106,32 @@ const WasteManagementRequest = () => {
     formDataToSubmit.append('wasteType', formData.wasteType);
     formDataToSubmit.append('wasteDetails', formData.wasteDetails);
 
-    // Append additional fields based on waste type
     if (formData.wasteType === 'plastic') {
       formDataToSubmit.append('plasticType', formData.plasticType);
       formDataToSubmit.append('plasticCount', formData.plasticCount);
     }
-
     if (formData.wasteType === 'metal') {
       formDataToSubmit.append('metalType', formData.metalType);
       formDataToSubmit.append('metalWeight', formData.metalWeight);
     }
-
     if (formData.wasteType === 'pesticide') {
       formDataToSubmit.append('pesticideAmount', formData.pesticideAmount);
     }
-
     if (formData.wasteType === 'other') {
       formDataToSubmit.append('otherWasteType', formData.otherWasteType);
     }
 
-    // Append file if uploaded
     if (formData.file) {
       formDataToSubmit.append('file', formData.file);
     }
 
     try {
-      const token = localStorage.getItem('token'); // Ensure you're retrieving the token correctly
+      const token = localStorage.getItem('token');
 
       const response = await axios.post('http://localhost:5000/api/waste/request', formDataToSubmit, {
         headers: {
           'Content-Type': 'multipart/form-data',
-          'Authorization': `Bearer ${token}`, // Corrected template literal
+          'Authorization': `Bearer ${token}`,
         },
       });
 
@@ -171,14 +160,11 @@ const WasteManagementRequest = () => {
 
   return (
     <div className={styles.mainContent}>
-      <Navbar /> {/* Navbar component */}
+      <Navbar />
       <div className={styles.adminLayout}>
-        <Sidebar /> {/* Sidebar component */}
-           
-           
-        
+        <Sidebar />
         <div className={styles.formContainer}>
-        <h2>Waste Management Request</h2>
+          <h2>Waste Management Request</h2>
           <form onSubmit={handleSubmit} className={styles.wasteForm}>
             <div className={styles.formGroup}>
               <label htmlFor="userName">Your Name:</label>
@@ -218,14 +204,123 @@ const WasteManagementRequest = () => {
               {errors.phone && <p className={styles.error}>{errors.phone}</p>}
             </div>
 
-            {/* Additional fields for waste type can be added here */}
             <div className={styles.formGroup}>
-              <label htmlFor="file">Upload Supporting Document (optional):</label>
-              <input type="file" id="file" onChange={handleFileChange} />
+              <label htmlFor="wasteType">Waste Type:</label>
+              <select
+                id="wasteType"
+                name="wasteType"
+                value={formData.wasteType}
+                onChange={handleInputChange}
+                required
+              >
+                <option value="">Select Waste Type</option>
+                <option value="plastic">Plastic</option>
+                <option value="metal">Metal</option>
+                <option value="pesticide">Pesticide</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            {formData.wasteType === 'plastic' && (
+              <div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="plasticType">Plastic Type:</label>
+                  <input
+                    type="text"
+                    id="plasticType"
+                    name="plasticType"
+                    value={formData.plasticType}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="plasticCount">Plastic Count:</label>
+                  <input
+                    type="number"
+                    id="plasticCount"
+                    name="plasticCount"
+                    value={formData.plasticCount}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+            )}
+
+            {formData.wasteType === 'metal' && (
+              <div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="metalType">Metal Type:</label>
+                  <input
+                    type="text"
+                    id="metalType"
+                    name="metalType"
+                    value={formData.metalType}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className={styles.formGroup}>
+                  <label htmlFor="metalWeight">Metal Weight (kg):</label>
+                  <input
+                    type="number"
+                    id="metalWeight"
+                    name="metalWeight"
+                    value={formData.metalWeight}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+              </div>
+            )}
+
+            {formData.wasteType === 'pesticide' && (
+              <div className={styles.formGroup}>
+                <label htmlFor="pesticideAmount">Pesticide Amount (liters):</label>
+                <input
+                  type="number"
+                  id="pesticideAmount"
+                  name="pesticideAmount"
+                  value={formData.pesticideAmount}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+            )}
+
+            {formData.wasteType === 'other' && (
+              <div className={styles.formGroup}>
+                <label htmlFor="otherWasteType">Specify Waste Type:</label>
+                <input
+                  type="text"
+                  id="otherWasteType"
+                  name="otherWasteType"
+                  value={formData.otherWasteType}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+            )}
+
+            <div className={styles.formGroup}>
+              <label htmlFor="wasteDetails">Request Details:</label>
+              <textarea
+                id="wasteDetails"
+                name="wasteDetails"
+                value={formData.wasteDetails}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
+
+            <div className={styles.formGroup}>
+              <label htmlFor="file">Upload File (optional):</label>
+              <input type="file" id="file" name="file" onChange={handleFileChange} />
               {errors.file && <p className={styles.error}>{errors.file}</p>}
             </div>
 
-            <button type="submit" className={styles.submitButton} disabled={!isSubmitEnabled}>
+            <button type="submit" disabled={!isSubmitEnabled} className={styles.submitButton}>
               Submit Request
             </button>
           </form>

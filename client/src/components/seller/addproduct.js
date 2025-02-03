@@ -16,7 +16,6 @@ const AddProduct = () => {
   const [formValid, setFormValid] = useState(false);
   const [touched, setTouched] = useState({
     productName: false,
-    description: false,
     price: false,
     productCount: false,
   });
@@ -39,8 +38,6 @@ const AddProduct = () => {
       !doubleSpaceRegex.test(productName) &&
       productName.length <= 50 &&
       description &&
-      nameRegex.test(description) &&
-      !doubleSpaceRegex.test(description) &&
       price > 1 &&
       productCount > 1 &&
       images.length > 0 &&
@@ -120,12 +117,10 @@ const AddProduct = () => {
       <div className={styles.addProductContainer}>
         <Sidebar /> {/* Adding the Sidebar */}
 
-        
-
         <form className={styles.form} onSubmit={handleSubmit}>
           {/* Product Name Input */}
           <div className={styles.formGroup}>
-          <h1>Add New Product</h1>
+            <h1>Add New Product</h1>
             <label>Product Name</label>
             <input
               type="text"
@@ -150,14 +145,8 @@ const AddProduct = () => {
             <textarea
               value={description}
               onChange={(e) => handleFieldChange('description', e.target.value)}
-              onBlur={() => handleBlur('description')}
               required
             />
-            {touched.description && (!nameRegex.test(description) || doubleSpaceRegex.test(description)) && (
-              <p className={styles.error}>
-                Description should contain only alphabetic characters and no double spaces.
-              </p>
-            )}
           </div>
 
           {/* Price Input */}

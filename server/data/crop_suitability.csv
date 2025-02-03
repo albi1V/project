@@ -1,0 +1,1001 @@
+Crop Name,Min Temp (°C),Max Temp (°C),Ideal Conditions,Min Soil Moisture (%),Max Soil Moisture (%),Rainfall (mm/year),Soil Type,Sunlight (hours/day),Other Notes
+Wheat,5,20,Clear,10,50,400,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,401,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,402,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,403,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,404,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,405,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,406,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,407,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,408,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,409,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,410,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,411,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,412,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,413,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,414,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,415,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,416,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,417,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,418,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,419,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,420,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,421,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,422,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,423,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,424,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,425,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,426,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,427,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,428,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,429,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,430,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,431,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,432,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,433,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,434,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,435,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,436,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,437,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,438,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,439,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,10,60,440,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,11,61,441,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,12,62,442,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,13,63,443,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,14,64,444,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,15,65,445,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,16,66,446,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,17,67,447,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,18,68,448,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,19,69,449,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,20,70,450,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,21,71,451,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,22,72,452,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,23,73,453,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,24,74,454,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,25,75,455,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,26,76,456,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,27,77,457,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,28,78,458,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,29,79,459,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,30,50,460,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,31,51,461,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,32,52,462,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,33,53,463,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,34,54,464,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,35,55,465,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,36,56,466,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,37,57,467,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,38,58,468,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,39,59,469,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,40,60,470,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,41,61,471,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,42,62,472,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,43,63,473,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,44,64,474,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,45,65,475,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,46,66,476,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,47,67,477,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,48,68,478,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,49,69,479,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,10,70,480,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,11,71,481,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,12,72,482,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,13,73,483,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,14,74,484,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,15,75,485,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,16,76,486,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,17,77,487,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,18,78,488,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,19,79,489,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,20,50,490,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,21,51,491,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,22,52,492,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,23,53,493,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,24,54,494,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,25,55,495,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,26,56,496,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,27,57,497,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,28,58,498,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,29,59,499,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,30,60,500,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,31,61,501,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,32,62,502,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,33,63,503,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,34,64,504,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,35,65,505,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,36,66,506,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,37,67,507,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,38,68,508,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,39,69,509,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,40,70,510,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,41,71,511,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,42,72,512,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,43,73,513,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,44,74,514,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,45,75,515,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,46,76,516,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,47,77,517,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,48,78,518,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,49,79,519,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,10,50,520,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,521,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,522,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,523,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,524,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,525,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,526,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,527,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,528,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,529,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,530,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,531,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,532,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,533,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,534,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,535,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,536,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,537,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,538,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,539,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,540,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,541,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,542,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,543,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,544,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,545,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,546,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,547,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,548,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,549,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,550,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,551,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,552,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,553,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,554,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,555,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,556,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,557,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,558,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,559,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,10,60,560,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,11,61,561,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,12,62,562,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,13,63,563,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,14,64,564,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,15,65,565,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,16,66,566,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,17,67,567,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,18,68,568,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,19,69,569,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,20,70,570,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,21,71,571,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,22,72,572,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,23,73,573,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,24,74,574,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,25,75,575,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,26,76,576,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,27,77,577,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,28,78,578,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,29,79,579,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,30,50,580,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,31,51,581,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,32,52,582,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,33,53,583,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,34,54,584,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,35,55,585,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,36,56,586,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,37,57,587,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,38,58,588,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,39,59,589,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,40,60,590,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,41,61,591,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,42,62,592,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,43,63,593,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,44,64,594,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,45,65,595,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,46,66,596,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,47,67,597,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,48,68,598,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,49,69,599,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,10,70,600,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,11,71,601,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,12,72,602,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,13,73,603,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,14,74,604,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,15,75,605,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,16,76,606,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,17,77,607,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,18,78,608,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,19,79,609,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,20,50,610,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,21,51,611,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,22,52,612,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,23,53,613,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,24,54,614,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,25,55,615,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,26,56,616,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,27,57,617,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,28,58,618,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,29,59,619,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,30,60,620,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,31,61,621,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,32,62,622,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,33,63,623,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,34,64,624,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,35,65,625,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,36,66,626,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,37,67,627,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,38,68,628,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,39,69,629,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,40,70,630,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,41,71,631,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,42,72,632,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,43,73,633,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,44,74,634,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,45,75,635,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,46,76,636,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,47,77,637,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,48,78,638,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,49,79,639,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,10,50,640,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,641,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,642,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,643,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,644,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,645,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,646,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,647,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,648,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,649,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,650,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,651,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,652,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,653,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,654,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,655,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,656,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,657,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,658,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,659,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,660,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,661,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,662,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,663,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,664,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,665,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,666,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,667,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,668,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,669,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,670,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,671,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,672,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,673,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,674,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,675,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,676,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,677,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,678,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,679,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,10,60,680,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,11,61,681,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,12,62,682,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,13,63,683,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,14,64,684,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,15,65,685,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,16,66,686,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,17,67,687,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,18,68,688,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,19,69,689,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,20,70,690,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,21,71,691,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,22,72,692,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,23,73,693,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,24,74,694,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,25,75,695,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,26,76,696,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,27,77,697,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,28,78,698,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,29,79,699,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,30,50,700,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,31,51,701,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,32,52,702,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,33,53,703,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,34,54,704,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,35,55,705,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,36,56,706,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,37,57,707,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,38,58,708,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,39,59,709,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,40,60,710,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,41,61,711,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,42,62,712,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,43,63,713,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,44,64,714,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,45,65,715,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,46,66,716,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,47,67,717,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,48,68,718,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,49,69,719,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,10,70,720,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,11,71,721,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,12,72,722,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,13,73,723,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,14,74,724,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,15,75,725,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,16,76,726,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,17,77,727,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,18,78,728,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,19,79,729,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,20,50,730,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,21,51,731,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,22,52,732,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,23,53,733,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,24,54,734,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,25,55,735,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,26,56,736,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,27,57,737,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,28,58,738,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,29,59,739,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,30,60,740,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,31,61,741,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,32,62,742,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,33,63,743,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,34,64,744,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,35,65,745,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,36,66,746,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,37,67,747,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,38,68,748,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,39,69,749,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,40,70,750,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,41,71,751,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,42,72,752,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,43,73,753,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,44,74,754,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,45,75,755,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,46,76,756,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,47,77,757,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,48,78,758,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,49,79,759,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,10,50,760,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,761,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,762,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,763,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,764,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,765,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,766,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,767,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,768,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,769,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,770,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,771,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,772,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,773,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,774,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,775,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,776,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,777,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,778,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,779,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,780,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,781,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,782,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,783,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,784,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,785,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,786,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,787,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,788,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,789,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,790,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,791,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,792,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,793,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,794,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,795,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,796,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,797,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,798,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,799,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,10,60,800,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,11,61,801,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,12,62,802,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,13,63,803,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,14,64,804,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,15,65,805,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,16,66,806,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,17,67,807,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,18,68,808,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,19,69,809,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,20,70,810,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,21,71,811,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,22,72,812,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,23,73,813,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,24,74,814,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,25,75,815,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,26,76,816,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,27,77,817,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,28,78,818,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,29,79,819,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,30,50,820,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,31,51,821,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,32,52,822,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,33,53,823,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,34,54,824,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,35,55,825,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,36,56,826,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,37,57,827,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,38,58,828,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,39,59,829,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,40,60,830,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,41,61,831,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,42,62,832,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,43,63,833,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,44,64,834,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,45,65,835,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,46,66,836,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,47,67,837,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,48,68,838,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,49,69,839,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,10,70,840,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,11,71,841,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,12,72,842,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,13,73,843,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,14,74,844,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,15,75,845,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,16,76,846,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,17,77,847,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,18,78,848,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,19,79,849,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,20,50,850,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,21,51,851,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,22,52,852,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,23,53,853,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,24,54,854,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,25,55,855,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,26,56,856,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,27,57,857,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,28,58,858,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,29,59,859,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,30,60,860,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,31,61,861,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,32,62,862,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,33,63,863,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,34,64,864,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,35,65,865,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,36,66,866,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,37,67,867,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,38,68,868,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,39,69,869,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,40,70,870,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,41,71,871,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,42,72,872,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,43,73,873,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,44,74,874,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,45,75,875,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,46,76,876,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,47,77,877,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,48,78,878,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,49,79,879,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,10,50,880,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,881,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,882,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,883,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,884,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,885,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,886,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,887,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,888,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,889,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,890,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,891,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,892,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,893,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,894,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,895,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,896,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,897,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,898,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,899,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,900,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,901,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,902,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,903,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,904,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,905,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,906,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,907,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,908,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,909,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,910,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,911,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,912,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,913,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,914,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,915,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,916,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,917,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,918,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,919,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,10,60,920,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,11,61,921,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,12,62,922,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,13,63,923,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,14,64,924,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,15,65,925,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,16,66,926,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,17,67,927,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,18,68,928,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,19,69,929,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,20,70,930,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,21,71,931,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,22,72,932,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,23,73,933,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,24,74,934,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,25,75,935,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,26,76,936,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,27,77,937,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,28,78,938,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,29,79,939,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,30,50,940,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,31,51,941,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,32,52,942,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,33,53,943,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,34,54,944,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,35,55,945,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,36,56,946,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,37,57,947,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,38,58,948,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,39,59,949,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,40,60,950,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,41,61,951,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,42,62,952,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,43,63,953,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,44,64,954,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,45,65,955,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,46,66,956,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,47,67,957,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,48,68,958,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,49,69,959,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,10,70,960,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,11,71,961,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,12,72,962,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,13,73,963,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,14,74,964,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,15,75,965,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,16,76,966,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,17,77,967,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,18,78,968,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,19,79,969,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,20,50,970,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,21,51,971,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,22,52,972,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,23,53,973,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,24,54,974,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,25,55,975,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,26,56,976,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,27,57,977,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,28,58,978,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,29,59,979,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,30,60,980,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,31,61,981,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,32,62,982,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,33,63,983,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,34,64,984,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,35,65,985,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,36,66,986,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,37,67,987,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,38,68,988,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,39,69,989,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,40,70,990,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,41,71,991,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,42,72,992,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,43,73,993,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,44,74,994,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,45,75,995,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,46,76,996,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,47,77,997,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,48,78,998,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,49,79,999,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,10,50,1000,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,1001,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,1002,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,1003,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,1004,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,1005,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,1006,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,1007,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,1008,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,1009,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,1010,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,1011,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,1012,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,1013,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,1014,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,1015,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,1016,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,1017,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,1018,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,1019,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,1020,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,1021,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,1022,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,1023,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,1024,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,1025,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,1026,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,1027,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,1028,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,1029,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,1030,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,1031,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,1032,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,1033,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,1034,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,1035,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,1036,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,1037,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,1038,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,1039,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,10,60,1040,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,11,61,1041,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,12,62,1042,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,13,63,1043,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,14,64,1044,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,15,65,1045,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,16,66,1046,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,17,67,1047,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,18,68,1048,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,19,69,1049,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,20,70,1050,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,21,71,1051,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,22,72,1052,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,23,73,1053,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,24,74,1054,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,25,75,1055,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,26,76,1056,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,27,77,1057,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,28,78,1058,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,29,79,1059,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,30,50,1060,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,31,51,1061,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,32,52,1062,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,33,53,1063,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,34,54,1064,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,35,55,1065,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,36,56,1066,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,37,57,1067,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,38,58,1068,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,39,59,1069,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,40,60,1070,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,41,61,1071,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,42,62,1072,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,43,63,1073,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,44,64,1074,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,45,65,1075,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,46,66,1076,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,47,67,1077,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,48,68,1078,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,49,69,1079,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,10,70,1080,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,11,71,1081,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,12,72,1082,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,13,73,1083,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,14,74,1084,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,15,75,1085,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,16,76,1086,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,17,77,1087,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,18,78,1088,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,19,79,1089,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,20,50,1090,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,21,51,1091,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,22,52,1092,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,23,53,1093,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,24,54,1094,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,25,55,1095,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,26,56,1096,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,27,57,1097,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,28,58,1098,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,29,59,1099,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,30,60,1100,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,31,61,1101,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,32,62,1102,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,33,63,1103,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,34,64,1104,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,35,65,1105,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,36,66,1106,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,37,67,1107,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,38,68,1108,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,39,69,1109,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,40,70,1110,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,41,71,1111,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,42,72,1112,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,43,73,1113,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,44,74,1114,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,45,75,1115,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,46,76,1116,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,47,77,1117,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,48,78,1118,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,49,79,1119,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,10,50,1120,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,1121,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,1122,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,1123,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,1124,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,1125,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,1126,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,1127,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,1128,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,1129,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,1130,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,1131,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,1132,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,1133,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,1134,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,1135,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,1136,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,1137,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,1138,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,1139,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,1140,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,1141,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,1142,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,1143,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,1144,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,1145,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,1146,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,1147,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,1148,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,1149,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,1150,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,1151,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,1152,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,1153,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,1154,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,1155,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,1156,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,1157,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,1158,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,1159,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,10,60,1160,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,11,61,1161,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,12,62,1162,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,13,63,1163,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,14,64,1164,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,15,65,1165,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,16,66,1166,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,17,67,1167,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,18,68,1168,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,19,69,1169,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,20,70,1170,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,21,71,1171,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,22,72,1172,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,23,73,1173,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,24,74,1174,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,25,75,1175,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,26,76,1176,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,27,77,1177,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,28,78,1178,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,29,79,1179,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,30,50,1180,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,31,51,1181,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,32,52,1182,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,33,53,1183,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,34,54,1184,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,35,55,1185,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,36,56,1186,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,37,57,1187,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,38,58,1188,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,39,59,1189,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,40,60,1190,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,41,61,1191,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,42,62,1192,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,43,63,1193,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,44,64,1194,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,45,65,1195,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,46,66,1196,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,47,67,1197,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,48,68,1198,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,49,69,1199,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,10,70,400,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,11,71,401,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,12,72,402,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,13,73,403,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,14,74,404,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,15,75,405,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,16,76,406,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,17,77,407,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,18,78,408,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,19,79,409,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,20,50,410,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,21,51,411,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,22,52,412,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,23,53,413,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,24,54,414,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,25,55,415,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,26,56,416,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,27,57,417,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,28,58,418,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,29,59,419,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,30,60,420,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,31,61,421,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,32,62,422,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,33,63,423,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,34,64,424,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,35,65,425,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,36,66,426,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,37,67,427,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,38,68,428,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,39,69,429,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,40,70,430,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,41,71,431,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,42,72,432,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,43,73,433,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,44,74,434,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,45,75,435,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,46,76,436,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,47,77,437,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,48,78,438,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,49,79,439,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,10,50,440,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,441,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,442,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,443,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,444,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,445,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,446,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,447,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,448,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,449,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,450,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,451,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,452,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,453,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,454,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,455,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,456,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,457,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,458,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,459,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,460,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,461,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,462,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,463,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,464,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,465,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,466,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,467,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,468,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,469,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,470,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,471,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,472,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,473,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,474,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,475,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,476,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,477,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,478,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,479,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,10,60,480,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,11,61,481,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,12,62,482,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,13,63,483,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,14,64,484,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,15,65,485,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,16,66,486,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,17,67,487,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,18,68,488,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,19,69,489,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,20,70,490,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,21,71,491,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,22,72,492,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,23,73,493,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,24,74,494,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,25,75,495,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,26,76,496,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,27,77,497,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,28,78,498,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,29,79,499,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,30,50,500,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,31,51,501,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,32,52,502,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,33,53,503,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,34,54,504,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,35,55,505,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,36,56,506,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,37,57,507,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,38,58,508,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,39,59,509,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,40,60,510,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,41,61,511,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,42,62,512,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,43,63,513,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,44,64,514,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,45,65,515,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,46,66,516,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,47,67,517,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,48,68,518,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,49,69,519,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,10,70,520,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,11,71,521,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,12,72,522,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,13,73,523,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,14,74,524,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,15,75,525,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,16,76,526,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,17,77,527,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,18,78,528,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,19,79,529,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,20,50,530,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,21,51,531,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,22,52,532,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,23,53,533,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,24,54,534,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,25,55,535,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,26,56,536,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,27,57,537,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,28,58,538,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,29,59,539,Silt,9,Ideal for tropical regions.
+Garlic,15,20,Clear,30,60,540,Peaty,10,Prefers well-drained soil.
+Carrot,16,21,Cloudy,31,61,541,Chalky,11,Thrives in humid conditions.
+Spinach,17,22,Rainy,32,62,542,Loamy,6,Requires regular irrigation.
+Lettuce,18,23,Sunny,33,63,543,Sandy,7,Ideal for tropical regions.
+Peas,19,24,Clear,34,64,544,Clay,8,Prefers well-drained soil.
+Chickpeas,20,25,Cloudy,35,65,545,Silt,9,Thrives in humid conditions.
+Banana,21,26,Rainy,36,66,546,Peaty,10,Requires regular irrigation.
+Apple,22,27,Sunny,37,67,547,Chalky,11,Ideal for tropical regions.
+Orange,23,28,Clear,38,68,548,Loamy,6,Prefers well-drained soil.
+Grapes,24,29,Cloudy,39,69,549,Sandy,7,Thrives in humid conditions.
+Mango,25,30,Rainy,40,70,550,Clay,8,Requires regular irrigation.
+Pineapple,26,31,Sunny,41,71,551,Silt,9,Ideal for tropical regions.
+Papaya,27,32,Clear,42,72,552,Peaty,10,Prefers well-drained soil.
+Strawberry,28,33,Cloudy,43,73,553,Chalky,11,Thrives in humid conditions.
+Cucumber,29,34,Rainy,44,74,554,Loamy,6,Requires regular irrigation.
+Pumpkin,30,35,Sunny,45,75,555,Sandy,7,Ideal for tropical regions.
+Squash,31,36,Clear,46,76,556,Clay,8,Prefers well-drained soil.
+Cauliflower,32,37,Cloudy,47,77,557,Silt,9,Thrives in humid conditions.
+Cabbage,33,38,Rainy,48,78,558,Peaty,10,Requires regular irrigation.
+Broccoli,34,39,Sunny,49,79,559,Chalky,11,Ideal for tropical regions.
+Wheat,5,20,Clear,10,50,560,Loamy,6,Prefers well-drained soil.
+Rice,6,21,Cloudy,11,51,561,Sandy,7,Thrives in humid conditions.
+Corn,7,22,Rainy,12,52,562,Clay,8,Requires regular irrigation.
+Soybean,8,23,Sunny,13,53,563,Silt,9,Ideal for tropical regions.
+Barley,9,24,Clear,14,54,564,Peaty,10,Prefers well-drained soil.
+Oats,10,25,Cloudy,15,55,565,Chalky,11,Thrives in humid conditions.
+Sugarcane,11,26,Rainy,16,56,566,Loamy,6,Requires regular irrigation.
+Potato,12,27,Sunny,17,57,567,Sandy,7,Ideal for tropical regions.
+Tomato,13,28,Clear,18,58,568,Clay,8,Prefers well-drained soil.
+Onion,14,29,Cloudy,19,59,569,Silt,9,Thrives in humid conditions.
+Garlic,15,30,Rainy,20,60,570,Peaty,10,Requires regular irrigation.
+Carrot,16,31,Sunny,21,61,571,Chalky,11,Ideal for tropical regions.
+Spinach,17,32,Clear,22,62,572,Loamy,6,Prefers well-drained soil.
+Lettuce,18,33,Cloudy,23,63,573,Sandy,7,Thrives in humid conditions.
+Peas,19,34,Rainy,24,64,574,Clay,8,Requires regular irrigation.
+Chickpeas,20,35,Sunny,25,65,575,Silt,9,Ideal for tropical regions.
+Banana,21,36,Clear,26,66,576,Peaty,10,Prefers well-drained soil.
+Apple,22,37,Cloudy,27,67,577,Chalky,11,Thrives in humid conditions.
+Orange,23,38,Rainy,28,68,578,Loamy,6,Requires regular irrigation.
+Grapes,24,39,Sunny,29,69,579,Sandy,7,Ideal for tropical regions.
+Mango,25,20,Clear,30,70,580,Clay,8,Prefers well-drained soil.
+Pineapple,26,21,Cloudy,31,71,581,Silt,9,Thrives in humid conditions.
+Papaya,27,22,Rainy,32,72,582,Peaty,10,Requires regular irrigation.
+Strawberry,28,23,Sunny,33,73,583,Chalky,11,Ideal for tropical regions.
+Cucumber,29,24,Clear,34,74,584,Loamy,6,Prefers well-drained soil.
+Pumpkin,30,25,Cloudy,35,75,585,Sandy,7,Thrives in humid conditions.
+Squash,31,26,Rainy,36,76,586,Clay,8,Requires regular irrigation.
+Cauliflower,32,27,Sunny,37,77,587,Silt,9,Ideal for tropical regions.
+Cabbage,33,28,Clear,38,78,588,Peaty,10,Prefers well-drained soil.
+Broccoli,34,29,Cloudy,39,79,589,Chalky,11,Thrives in humid conditions.
+Wheat,5,30,Rainy,40,50,590,Loamy,6,Requires regular irrigation.
+Rice,6,31,Sunny,41,51,591,Sandy,7,Ideal for tropical regions.
+Corn,7,32,Clear,42,52,592,Clay,8,Prefers well-drained soil.
+Soybean,8,33,Cloudy,43,53,593,Silt,9,Thrives in humid conditions.
+Barley,9,34,Rainy,44,54,594,Peaty,10,Requires regular irrigation.
+Oats,10,35,Sunny,45,55,595,Chalky,11,Ideal for tropical regions.
+Sugarcane,11,36,Clear,46,56,596,Loamy,6,Prefers well-drained soil.
+Potato,12,37,Cloudy,47,57,597,Sandy,7,Thrives in humid conditions.
+Tomato,13,38,Rainy,48,58,598,Clay,8,Requires regular irrigation.
+Onion,14,39,Sunny,49,59,599,Silt,9,Ideal for tropical regions.

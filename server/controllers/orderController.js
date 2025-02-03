@@ -1,25 +1,31 @@
-const Order = require('../models/Order'); // Import the Order model
+const Order = require('../models/order'); // Import the Order model
 const Product = require('../models/product'); // Import the Product model
 
 // Controller to fetch orders for the authenticated buyer
 const getBuyerOrders = async (req, res) => {
   try {
+    console.log("Fetching orders for user:", req.user._id); // Log the user ID
+
     // Fetch orders associated with the authenticated user
     const orders = await Order.find({ user: req.user._id })
       .populate('cartItems.productId', 'name price') // Populate product details
       .exec();
 
+    console.log("Fetched orders:", orders); // Log the fetched orders
+
     if (!orders.length) {
+      console.log("No orders found for user:", req.user._id);
       return res.status(404).json({ message: 'No orders found' });
     }
 
     // Respond with the found orders
     res.json(orders);
   } catch (error) {
-    console.error('Error fetching orders:', error);
+    console.error('Error fetching orders:', error); // Log the error
     res.status(500).json({ message: 'Server error' });
   }
 };
+
 
 // Controller to fetch orders for the authenticated seller
 const getSellerOrders = async (req, res) => {

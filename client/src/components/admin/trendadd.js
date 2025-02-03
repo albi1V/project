@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Swal from 'sweetalert2';
-import Sidebar from './Asidebar';  // Assuming you have Sidebar and Navbar components
+import Sidebar from './Asidebar';
 import Navbar from './Anavbar';
-import styles from './trendadd.module.css';  // Your styles here
+import styles from './trendadd.module.css';
 
 const AddMarketTrend = () => {
   const [productName, setProductName] = useState('');
@@ -11,8 +11,8 @@ const AddMarketTrend = () => {
   const [ourPrice, setOurPrice] = useState('');
   const [date, setDate] = useState('');
   const [minDate, setMinDate] = useState('');
+  const [isFormValid, setIsFormValid] = useState(false);
 
-  // Set the minimum date to today's date in YYYY-MM-DD format
   useEffect(() => {
     const today = new Date();
     const year = today.getFullYear();
@@ -21,49 +21,58 @@ const AddMarketTrend = () => {
     setMinDate(`${year}-${month}-${day}`);
   }, []);
 
+  // Validation functions
+  const validateProductName = (name) => /^[a-zA-Z ]{1,50}$/.test(name) && !/\s\s+/.test(name);
+  const validatePriceField = (value) => /^\d{1,5}$/.test(value);
+
+  // Update form validity based on all field checks
+  useEffect(() => {
+    const isValid =
+      validateProductName(productName) &&
+      validatePriceField(marketValue) &&
+      validatePriceField(ourPrice) &&
+      date >= minDate;
+    setIsFormValid(isValid);
+  }, [productName, marketValue, ourPrice, date, minDate]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!isFormValid) return;
+
     try {
       const response = await axios.post('http://localhost:5000/api/trend/add', {
         productName,
         marketValue,
         ourPrice,
-        date
+        date,
       });
-  
-      // Show success message with SweetAlert
+
       await Swal.fire({
         title: 'Success!',
         text: response.data.message,
         icon: 'success',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'OK',
       });
-  
-      // Optionally redirect or reload the page after success
+
       setTimeout(() => {
         window.location.reload();
       }, 100);
     } catch (error) {
       console.error('Error adding market trend', error);
-  
-      // Show error message with SweetAlert
       Swal.fire({
         title: 'Error!',
         text: 'Failed to add market trend. Please try again.',
         icon: 'error',
-        confirmButtonText: 'OK'
+        confirmButtonText: 'OK',
       });
     }
   };
-  
 
   return (
     <div className={styles.mainContent}>
-      <Navbar /> {/* Include the Navbar */}
-
+      <Navbar />
       <div className={styles.adminLayout}>
-        <Sidebar /> {/* Include the Sidebar */}
-
+        <Sidebar />
         <div className={styles.formContainer}>
           <h1>Add Market Trend</h1>
           <form onSubmit={handleSubmit} className={styles.form}>
@@ -73,7 +82,9 @@ const AddMarketTrend = () => {
                 <input
                   type="text"
                   value={productName}
-                  onChange={(e) => setProductName(e.target.value)}
+                  onChange={(e) => {
+                    if (validateProductName(e.target.value)) setProductName(e.target.value);
+                  }}
                   placeholder="Product Name"
                   required
                 />
@@ -86,7 +97,9 @@ const AddMarketTrend = () => {
                 <input
                   type="number"
                   value={marketValue}
-                  onChange={(e) => setMarketValue(e.target.value)}
+                  onChange={(e) => {
+                    if (validatePriceField(e.target.value)) setMarketValue(e.target.value);
+                  }}
                   placeholder="Market Value"
                   required
                 />
@@ -99,7 +112,9 @@ const AddMarketTrend = () => {
                 <input
                   type="number"
                   value={ourPrice}
-                  onChange={(e) => setOurPrice(e.target.value)}
+                  onChange={(e) => {
+                    if (validatePriceField(e.target.value)) setOurPrice(e.target.value);
+                  }}
                   placeholder="Our Price"
                   required
                 />
@@ -113,13 +128,17 @@ const AddMarketTrend = () => {
                   type="date"
                   value={date}
                   onChange={(e) => setDate(e.target.value)}
-                  min={minDate}  // This restricts the selection of past dates
+                  min={minDate}
                   required
                 />
               </label>
             </div>
 
-            <button type="submit" className={styles.submitButton}>
+            <button
+              type="submit"
+              className={styles.submitButton}
+              disabled={!isFormValid} // Only enable when form is valid
+            >
               Add Market Trend
             </button>
           </form>

@@ -18,6 +18,7 @@ const BuyerOrdersPage = () => {
           },
         });
         setOrders(response.data);
+        console.log(response.data)
       } catch (error) {
         console.error('Failed to fetch buyer orders', error);
       }
