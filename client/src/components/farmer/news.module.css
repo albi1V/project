@@ -1,0 +1,109 @@
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .adminLayout {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
+  .formContainer {
+    padding: 20px;
+    flex-grow: 1;
+    margin-left: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .newspaperTitle {
+    font-family: 'Georgia', serif;
+    font-size: 3rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .tagline {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .newsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .articleCard {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .articleImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .articleContent {
+    padding: 16px;
+  }
+  
+  .articleTitle {
+    font-family: 'Georgia', serif;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .articleDate {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 12px;
+  }
+  
+  .articleSnippet {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 16px;
+  }
+  
+  .readMoreLink {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .readMoreLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .newsGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .newsGrid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

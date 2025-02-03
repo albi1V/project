@@ -178,7 +178,15 @@ const FarmerLanding = () => {
           <img src={trend} alt="Manage Waste" className={styles.cardImage} />
           <h2>PLANT</h2>
         </div>
-
+        
+        <div
+          id="currentTrendCard"
+          className={styles.card}
+          onClick={() => navigate("/viewnews")}
+        >
+          <img src={trend} alt="Manage Waste" className={styles.cardImage} />
+          <h2>NEWS</h2>
+        </div>
         <div className={styles.card} onClick={() => navigate("/fmrViewOrder")}>
           <img src={order} alt="orders" className={styles.cardImage} />
           <h2>ORDERS</h2>

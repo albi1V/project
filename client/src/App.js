@@ -53,6 +53,7 @@ import ReportedBlogs from "./components/admin/reportedblog";
 import Adtrendview from "./components/admin/adtrendview";
 import ViewSuggesions from "./components/admin/viewsuggesions";
 import AdAddnotification from "./components/admin/adAddnotification";
+import Viewnews from "./components/farmer/news";
 
 
 const App = () => {
@@ -83,6 +84,7 @@ const App = () => {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/fmrViewOrder" element={<FmrViewOrder />} />
           <Route path="/plantLocation" element={<PlantLocation />} />
+          <Route path="/viewnews" element={<Viewnews />} />
 
           
 
