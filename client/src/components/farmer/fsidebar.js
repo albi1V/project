@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaEdit, FaPlus, FaProductHunt, FaBlog, FaRegLightbulb, FaRecycle, FaEnvelopeOpenText, FaChartLine,FaClipboardList  } from 'react-icons/fa'; // Example icons
+import { FaEdit, FaPlus, FaSeedling, FaNewspaper,FaProductHunt, FaBlog, FaRegLightbulb, FaRecycle, FaEnvelopeOpenText, FaChartLine,FaClipboardList  } from 'react-icons/fa'; // Example icons
 import axios from 'axios'; // Add axios for API calls
 import styles from './fsidebar.module.css'; // Ensure this CSS file exists for styling
 
@@ -63,6 +63,19 @@ const Sidebar = ({ farmerName }) => {
         Order View
       </Link>
     </li>
+    <li>
+  <Link to="/plantLocation">
+    <FaSeedling className={styles.icon} /> {/* Plant Icon */}
+    Plant Analysis
+  </Link>
+</li>
+<li>
+  <Link to="/viewnews">
+    <FaNewspaper className={styles.icon} /> {/* News Icon */}
+    News feeds 
+  </Link>
+</li>
+
       </ul>
     </aside>
   );

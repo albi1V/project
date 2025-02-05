@@ -6,6 +6,7 @@ import styles from "./slrlan.module.css"; // Importing CSS module
 import add from "../../assets/slrfun/add.png";
 import checkord from "../../assets/slrfun/checkord.png";
 import comp from "../../assets/slrfun/comp.png";
+import stati from "../../assets/slrfun/slr_statistics.png"
 
 import blog1 from "../../assets/blog_images/blog1.jpg";
 import blog2 from "../../assets/blog_images/blog2.jpg";
@@ -140,6 +141,15 @@ const SellerLanding = () => {
           <img src={comp} alt="Whats New" className={styles.cardImage} />
           <h2>COMPLINTS</h2>
         </div>
+
+        <div
+          className={styles.card}
+          onClick={() => navigate("/slr-view-statistics")}
+        >
+          <img src={stati} alt="Whats New" className={styles.cardImage} />
+          <h2>STATISTICS</h2>
+        </div>
+
         {/* <div className={styles.card} onClick={() => console.log('Card 4 clicked')}>
             <img src="path/to/image4.jpg" alt="Manage Waste" className={styles.cardImage} />
             <h2>MANAGE WASTE</h2>

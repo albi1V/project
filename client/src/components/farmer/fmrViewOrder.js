@@ -11,7 +11,16 @@ const BuyerOrdersPage = () => {
     // Fetch buyer's orders
     const fetchOrders = async () => {
       try {
-        const token = localStorage.getItem('token'); // Adjust based on where you store your token
+        const token = localStorage.getItem('token');
+
+
+        // console.log("Token from localStorage:", token); // Debugging log
+
+        // if (!token) {
+        //   console.error("Token is missing! Redirecting to login or handling error...");
+        //   return; // Stop execution if there's no token
+        // }
+
         const response = await axios.get('http://localhost:5000/api/orders/buyer-orders', {
           headers: {
             Authorization: `Bearer ${token}`, // Include the token in the Authorization header

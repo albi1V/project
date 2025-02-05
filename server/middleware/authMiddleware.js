@@ -12,6 +12,9 @@ const authMiddleware = async (req, res, next) => {
   try {
     // Check if the authorization header exists
     const authHeader = req.headers.authorization;
+
+    //console.log('Authorization Header:', authHeader);
+
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
       return res.status(STATUS_CODES.UNAUTHORIZED).json({ message: 'Authorization header is missing or improperly formatted. Please provide a Bearer token.' });
     }

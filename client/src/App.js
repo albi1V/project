@@ -16,6 +16,7 @@ import SlrViewtrend from "./components/seller/slrViewTend";
 import SlrViewOrder from "./components/seller/slrViewOrder";
 import SlrAbout from "./components/seller/slrabout";
 import SlrVwcompliants from "./components/seller/slrVwcompliants";
+import Statistics from "./components/seller/dailyreports";
 
 
 import Footer from "./components/footer/footer";
@@ -100,19 +101,20 @@ const App = () => {
           <Route path="/slr-view-orderes" element={<SlrViewOrder />} />
           <Route path="/SlrAbout" element={<SlrAbout />} />
           <Route path="/slr-complaints" element={<SlrVwcompliants />} />
+          <Route path="/slr-view-statistics" element={<Statistics />} />
       
-            <Route path="/adminlan" element={<AdminLan />} />
-            <Route path="/addscheme" element={<AddScheme />} />
-            <Route path="/adviewscheme" element={<ViewScheme />} />
-            <Route path="/editscheme/:schemeId" element={<EditScheme />} />
-            <Route path="/WasteRequest" element={<WasteRequest />} />
-            <Route path="/trendadd" element={<TrendAdd />} />
-            <Route path="/tendpurch" element={<TendPurch />} />
-            <Route path="/user-controle" element={<AdminUserControle />} />
-            <Route path="/reported-blogs" element={<ReportedBlogs />} />
-            <Route path="/admin-trend-view" element={<Adtrendview />} />
-            <Route path="/admin-view-suggesion" element={<ViewSuggesions />} />
-            <Route path="/admin-add-notifications" element={<AdAddnotification />} />
+          <Route path="/adminlan" element={<AdminLan />} />
+          <Route path="/addscheme" element={<AddScheme />} />
+          <Route path="/adviewscheme" element={<ViewScheme />} />
+          <Route path="/editscheme/:schemeId" element={<EditScheme />} />
+          <Route path="/WasteRequest" element={<WasteRequest />} />
+          <Route path="/trendadd" element={<TrendAdd />} />
+          <Route path="/tendpurch" element={<TendPurch />} />
+          <Route path="/user-controle" element={<AdminUserControle />} />
+          <Route path="/reported-blogs" element={<ReportedBlogs />} />
+          <Route path="/admin-trend-view" element={<Adtrendview />} />
+          <Route path="/admin-view-suggesion" element={<ViewSuggesions />} />
+          <Route path="/admin-add-notifications" element={<AdAddnotification />} />
 
 
         </Routes>

@@ -44,7 +44,7 @@ const fetchWeatherData = async (latitude, longitude, apiKey) => {
     const response = await axios.get(weatherApiUrl);
 
     // response from api
-     console.log('Weather API Response:', response.data);
+    //  console.log('Weather API Response:', response.data);
 
     if (response.data && response.data.current) {
       const { temperature, weather_descriptions } = response.data.current;
@@ -132,7 +132,7 @@ const fetchWeatherDetails = async (req, res) => {
     const weatherResponse = await axios.get(
       `http://api.weatherstack.com/current?access_key=${weatherApiKey}&query=${lat},${lng}`
     );
-    console.log("Weather API Response:", JSON.stringify(weatherResponse.data, null, 2));
+    //console.log("Weather API Response:", JSON.stringify(weatherResponse.data, null, 2));
 
     if (weatherResponse.data && weatherResponse.data.location && weatherResponse.data.current) {
       const temperature = weatherResponse.data.current.temperature;

@@ -11,6 +11,10 @@ import trend from "../../assets/farln/trend.png";
 import viewb from "../../assets/farln/viewb.png";
 import waste from "../../assets/farln/waste.png";
 import order from "../../assets/farln/order.png";
+import plant from "../../assets/farln/plant.png"; 
+import news from "../../assets/farln/newspaper.png"; 
+
+
 
 import blog1 from "../../assets/blog_images/blog1.jpg";
 import blog2 from "../../assets/blog_images/blog2.jpg";
@@ -175,7 +179,7 @@ const FarmerLanding = () => {
           className={styles.card}
           onClick={() => navigate("/plantLocation")}
         >
-          <img src={trend} alt="Manage Waste" className={styles.cardImage} />
+          <img src={plant} alt="Manage Waste" className={styles.cardImage} />
           <h2>PLANT</h2>
         </div>
         
@@ -184,7 +188,7 @@ const FarmerLanding = () => {
           className={styles.card}
           onClick={() => navigate("/viewnews")}
         >
-          <img src={trend} alt="Manage Waste" className={styles.cardImage} />
+          <img src={news} alt="Manage Waste" className={styles.cardImage} />
           <h2>NEWS</h2>
         </div>
         <div className={styles.card} onClick={() => navigate("/fmrViewOrder")}>
