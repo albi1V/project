@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Sidebar from "./slrSbar";
 import Navbar from "./slrNbar";
-import styles from "./dailyreport.module.css"; // Optional, if you want custom styling
+import styles from "./dailyreport.module.css";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+import notoFont from "../../fonts/notoFont";
+// Optional, if you want custom styling
 
 const OrderAnalysis = () => {
   const [startDate, setStartDate] = useState("");
@@ -12,23 +16,22 @@ const OrderAnalysis = () => {
   const [totalOrders, setTotalOrders] = useState(0);
   const [avgOrderValue, setAvgOrderValue] = useState(0);
 
-  const sellerId = localStorage.getItem("sellerId"); // Assuming seller ID is stored in localStorage
+  const sellerId = localStorage.getItem("email");
 
   useEffect(() => {
-    if (startDate && endDate) {
-      fetchOrderData();
-    }
-  }, [startDate, endDate]);
+    fetchOrderData(); // Fetch all orders on page load
+  }, []);
 
-  const fetchOrderData = async () => {
+  const fetchOrderData = async (filter = false) => {
     try {
-      const response = await axios.get(
-        `http://localhost:5000/api/seller/order-analysis/${sellerId}`,
-        {
-          params: { startDate, endDate },
-        }
-      );
-      const { totalOrders, totalRevenue, avgOrderValue, orders } = response.data;
+      let url = `http://localhost:5000/api/seller/order-analysis/${sellerId}`;
+      if (filter && startDate && endDate) {
+        url += `?startDate=${startDate}&endDate=${endDate}`;
+      }
+
+      const response = await axios.get(url);
+      const { totalOrders, totalRevenue, avgOrderValue, orders } =
+        response.data;
       setOrders(orders);
       setTotalOrders(totalOrders);
       setTotalRevenue(totalRevenue);
@@ -38,6 +41,55 @@ const OrderAnalysis = () => {
     }
   };
 
+  const downloadReport = () => {
+    const doc = new jsPDF();
+  
+    // Add the custom font
+    doc.addFileToVFS("NotoSans.ttf", notoFont);
+    doc.addFont("NotoSans.ttf", "NotoSans", "normal");
+    doc.setFont("NotoSans");
+
+    // Title
+    doc.setFontSize(18);
+    doc.text("Order Analysis Report", 75, 20);
+  
+    // Summary Details
+    doc.setFontSize(12);
+    doc.text(`Total Orders: ${totalOrders}`, 14, 30);
+    doc.text(`Total Revenue: \u20B9${totalRevenue}`, 14, 40); // Use Unicode ₹
+    doc.text(`Avg Order Value: \u20B9${avgOrderValue}`, 14, 50); // Use Unicode ₹
+  
+    // Table Headers
+    const tableColumn = ["Order ID", "Buyer", "Product", "Quantity", "Price", "Status"];
+    const tableRows = [];
+  
+    // Add Order Data to Table
+    orders.forEach((order) => {
+      const rowData = [
+        order._id,
+        order.buyerId?.username || "N/A",
+        order.productId?.name || "N/A",
+        order.quantity,
+        `\u20B9${order.totalPrice}`, // Use Unicode ₹
+        order.status,
+      ];
+      tableRows.push(rowData);
+    });
+
+    // ✅ Set font explicitly in autoTable
+    doc.autoTable({
+      head: [tableColumn],
+      body: tableRows,
+      startY: 60,
+      styles: { font: "NotoSans" }, // ✅ Fix ₹ symbol in table
+    });
+  
+    // Save the PDF
+    doc.save("Order_Analysis_Report.pdf");
+};
+
+  
+
   return (
     <div className={styles.mainContent}>
       <Navbar />
@@ -46,7 +98,7 @@ const OrderAnalysis = () => {
         <div className={styles.orderAnalysisContent}>
           <h2 className="text-2xl font-bold mb-4">Order Analysis</h2>
 
-          {/* Date Pickers */}
+          {/* Date Pickers & Button */}
           <div className="flex gap-4 mb-6">
             <input
               type="date"
@@ -60,6 +112,12 @@ const OrderAnalysis = () => {
               onChange={(e) => setEndDate(e.target.value)}
               className="p-2 border rounded-md"
             />
+            <button
+              onClick={() => fetchOrderData(true)}
+              className="bg-blue-500 text-white px-4 py-2 rounded-md"
+            >
+              Get Report
+            </button>
           </div>
 
           {/* Summary Cards */}
@@ -77,6 +135,13 @@ const OrderAnalysis = () => {
               <p className="text-2xl font-bold">₹{avgOrderValue}</p>
             </div>
           </div>
+
+          <button
+            onClick={downloadReport}
+            className="bg-green-500 text-white px-4 py-2 rounded-md mt-4"
+          >
+            Download PDF
+          </button>
 
           {/* Order Table */}
           <div className="bg-white p-4 shadow-md rounded-md">
@@ -107,7 +172,7 @@ const OrderAnalysis = () => {
                 ) : (
                   <tr>
                     <td colSpan="6" className="border p-4 text-center">
-                      No orders found for the selected dates.
+                      No orders found.
                     </td>
                   </tr>
                 )}

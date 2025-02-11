@@ -15,6 +15,7 @@ const reportRoutes = require('./reportRoutes')
 const PaymentRoutes = require('./PaymentRoutes')
 const plantlocRoutes = require('./plantLocRoutes')
 const newsRoutes = require('./newsRoutes')
+const sellerRoutes=require('./sellerRoutes')
 
 
 
@@ -48,5 +49,7 @@ router.use('/payment',PaymentRoutes)
 router.use('/plantlocation',plantlocRoutes)
 
 router.use('/news',newsRoutes)
+
+router.use('/seller',sellerRoutes)
 
 module.exports = router;

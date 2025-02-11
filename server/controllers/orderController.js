@@ -53,6 +53,8 @@ const getSellerOrders = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
+
 // Controller to approve an order
 const approveOrder = async (req, res) => {
   try {
