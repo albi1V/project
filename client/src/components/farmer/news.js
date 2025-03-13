@@ -10,7 +10,7 @@ const NewsFeed = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/news/agri");
+        const response = await axios.get("https://project-9jg7.onrender.com/api/news/agri");
         setNews(response.data.news);
       } catch (error) {
         console.error("Error fetching news:", error);

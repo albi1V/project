@@ -56,7 +56,7 @@ const Checkout = () => {
   // Verify payment function
   const verifyPayment = async (response) => {
     try {
-      const verifyResponse = await fetch("http://localhost:5000/api/payment/verify", {
+      const verifyResponse = await fetch("https://project-9jg7.onrender.com/api/payment/verify", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const Checkout = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/payment/order", {
+      const response = await fetch("https://project-9jg7.onrender.com/api/payment/order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -111,7 +111,7 @@ const Checkout = () => {
             alert('Payment successful! Order ID: ' + response.razorpay_order_id);
 
             // Now save the order details in the database
-            const saveResponse = await fetch("http://localhost:5000/api/payment/save-order", {
+            const saveResponse = await fetch("https://project-9jg7.onrender.com/api/payment/save-order", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -167,7 +167,7 @@ const Checkout = () => {
   const updateStock = async () => {
     try {
       await Promise.all(cartItems.map(async (item) => {
-        const updateResponse = await fetch(`http://localhost:5000/api/products/update-stock/${item.product._id}`, {
+        const updateResponse = await fetch(`https://project-9jg7.onrender.com/api/products/update-stock/${item.product._id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -278,7 +278,7 @@ const Checkout = () => {
                     <h3>{product.name ? product.name : 'No Name'} - ₹{product.price?.toFixed(2) || 'N/A'} x {item.quantity}</h3>
                     {product?.images?.length > 0 && (
                       <img
-                        src={`http://localhost:5000/api/products/get-product-images/${product.images[0]}`}
+                        src={`https://project-9jg7.onrender.com/api/products/get-product-images/${product.images[0]}`}
                         alt={product.name || 'Product Image'}
                         className={styles.productImage}
                       />

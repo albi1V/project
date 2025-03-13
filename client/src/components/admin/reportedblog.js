@@ -15,7 +15,7 @@ const AdminReportPage = () => {
 
   const fetchReports = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/report/all-reports');
+      const response = await axios.get('https://project-9jg7.onrender.com/api/report/all-reports');
       setReports(response.data); // Set initial reports data with correct block status
       setLoading(false);
     } catch (err) {
@@ -26,7 +26,7 @@ const AdminReportPage = () => {
 
   const handleBlock = async (blogId) => {
     try {
-      await axios.put(`http://localhost:5000/api/report/block-blog/${blogId}`);
+      await axios.put(`https://project-9jg7.onrender.com/api/report/block-blog/${blogId}`);
       setReports((prevReports) =>
         prevReports.map((report) =>
           report.blogId._id === blogId
@@ -41,7 +41,7 @@ const AdminReportPage = () => {
 
   const handleUnblock = async (blogId) => {
     try {
-      await axios.put(`http://localhost:5000/api/report/unblock-blog/${blogId}`);
+      await axios.put(`https://project-9jg7.onrender.com/api/report/unblock-blog/${blogId}`);
       setReports((prevReports) =>
         prevReports.map((report) =>
           report.blogId._id === blogId
@@ -78,7 +78,7 @@ const AdminReportPage = () => {
                 <p className={styles.blogContent}>{report.blogId.content}</p>
                 {report.blogId.image && (
                   <img
-                    src={`http://localhost:5000/api/blog/get-blog-images/${report.blogId.image}`}
+                    src={`https://project-9jg7.onrender.com/api/blog/get-blog-images/${report.blogId.image}`}
                     alt={report.blogId.title}
                     className={styles.blogImage}
                   />

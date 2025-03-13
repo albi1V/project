@@ -24,7 +24,7 @@ const UploadImage = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:5000/api/ml/predict", formData);
+      const response = await axios.post("https://project-9jg7.onrender.com/api/ml/predict", formData);
       setPredictionData(response.data);
     } catch (error) {
       console.error("Error uploading image:", error);
@@ -39,7 +39,7 @@ const UploadImage = () => {
 
     try {
       await axios.post(
-        'http://localhost:5000/api/cart/addcart',
+        'https://project-9jg7.onrender.com/api/cart/addcart',
         { productId, quantity: 1 },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -78,7 +78,7 @@ const UploadImage = () => {
     <h3>Recommended Products:</h3>
     {predictionData.products.map((product, index) => (
       <div key={index} className={styles.productContainer}>
-        <img src={`http://localhost:5000/api/products/get-product-images/${product.images[0] || ''}`} 
+        <img src={`https://project-9jg7.onrender.com/api/products/get-product-images/${product.images[0] || ''}`} 
              alt={product.name} className={styles.productImage} />
         <p><strong>Name:</strong> {product.name}</p>
         <p><strong>Price:</strong> ₹{product.price}</p>

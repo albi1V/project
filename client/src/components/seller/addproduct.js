@@ -96,7 +96,7 @@ const AddProduct = () => {
       images.forEach((image) => formData.append('images', image));
       formData.append('sellerEmail', email);
 
-      await axios.post('http://localhost:5000/api/products/add', formData, {
+      await axios.post('https://project-9jg7.onrender.com/api/products/add', formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',

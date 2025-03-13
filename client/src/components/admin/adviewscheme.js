@@ -15,7 +15,7 @@ const AdminSchemes = () => {
   useEffect(() => {
     const fetchSchemes = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/schemes/viewall', {
+        const response = await axios.get('https://project-9jg7.onrender.com/api/schemes/viewall', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setSchemes(response.data);
@@ -40,7 +40,7 @@ const AdminSchemes = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.delete(`http://localhost:5000/api/schemes/delete/${schemeId}`, {
+          await axios.delete(`https://project-9jg7.onrender.com/api/schemes/delete/${schemeId}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           
@@ -92,11 +92,11 @@ const AdminSchemes = () => {
                 <p>
                   {scheme.file && (
                     scheme.file.endsWith('.pdf') ? (
-                      <a href={`http://localhost:5000/api/schemes/get-scheme-files/${scheme.file}`} target="_blank" rel="noopener noreferrer">
+                      <a href={`https://project-9jg7.onrender.com/api/schemes/get-scheme-files/${scheme.file}`} target="_blank" rel="noopener noreferrer">
                         Download {scheme.name} document
                       </a>
                     ) : (
-                      <img src={`http://localhost:5000/api/schemes/get-scheme-files/${scheme.file}`} alt={scheme.name} />
+                      <img src={`https://project-9jg7.onrender.com/api/schemes/get-scheme-files/${scheme.file}`} alt={scheme.name} />
                     )
                   )}
                 </p>

@@ -15,7 +15,7 @@ const SellerOrdersPage = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          "http://localhost:5000/api/orders/seller-orders",
+          "https://project-9jg7.onrender.com/api/orders/seller-orders",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -36,7 +36,7 @@ const SellerOrdersPage = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/api/orders/approve-order/${orderId}`,
+        `https://project-9jg7.onrender.com/api/orders/approve-order/${orderId}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -72,7 +72,7 @@ const SellerOrdersPage = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:5000/api/orders/decline-order/${orderId}`,
+        `https://project-9jg7.onrender.com/api/orders/decline-order/${orderId}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },

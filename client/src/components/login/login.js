@@ -13,7 +13,7 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://project-9jg7.onrender.com/api/auth/login', { email, password });
       console.log(response);
       const { token, role: userRole, email: userEmail, userId } = response.data;
   
@@ -46,7 +46,7 @@ const LoginPage = () => {
       const user = result.user;
       const idToken = await user.getIdToken();
 
-      const response = await axios.post('http://localhost:5000/api/auth/google-login', {
+      const response = await axios.post('https://project-9jg7.onrender.com/api/auth/google-login', {
         token: idToken,
         email: user.email,
       });

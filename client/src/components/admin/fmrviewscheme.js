@@ -12,7 +12,7 @@ const FarmerViewSchemes = () => {
   useEffect(() => {
     const fetchSchemes = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/schemes/viewall', {
+        const response = await axios.get('https://project-9jg7.onrender.com/api/schemes/viewall', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setSchemes(response.data);
@@ -51,11 +51,11 @@ const FarmerViewSchemes = () => {
                     <p>
                       {scheme.file && (
                         scheme.file.endsWith('.pdf') ? (
-                          <a href={`http://localhost:5000/api/schemes/get-scheme-files/${scheme.file}`} target="_blank" rel="noopener noreferrer">
+                          <a href={`https://project-9jg7.onrender.com/api/schemes/get-scheme-files/${scheme.file}`} target="_blank" rel="noopener noreferrer">
                             Download {scheme.name} document
                           </a>
                         ) : (
-                          <img src={`http://localhost:5000/api/schemes/get-scheme-files/${scheme.file}`} alt={scheme.name} />
+                          <img src={`https://project-9jg7.onrender.com/api/schemes/get-scheme-files/${scheme.file}`} alt={scheme.name} />
                         )
                       )}
                     </p>
@@ -75,12 +75,12 @@ const FarmerViewSchemes = () => {
                   {scheme.documentUrl && (
                     <div className={styles.schemeDocument}>
                       {scheme.documentUrl.endsWith('.pdf') ? (
-                        <a href={`http://localhost:5000/api/schemes/get-scheme-files/${scheme.documentUrl}`} target="_blank" rel="noopener noreferrer">
+                        <a href={`https://project-9jg7.onrender.com/api/schemes/get-scheme-files/${scheme.documentUrl}`} target="_blank" rel="noopener noreferrer">
                           View Scheme PDF
                         </a>
                       ) : (
                         <img
-                          src={`http://localhost:5000/api/schemes/get-scheme-files/${scheme.documentUrl}`}
+                          src={`https://project-9jg7.onrender.com/api/schemes/get-scheme-files/${scheme.documentUrl}`}
                           alt={scheme.name}
                           className={styles.schemeImage}
                         />

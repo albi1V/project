@@ -11,7 +11,7 @@ const AdminDashboard = () => {
     // Fetch all waste requests
     const fetchWasteRequests = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/waste/get-request');
+        const response = await axios.get('https://project-9jg7.onrender.com/api/waste/get-request');
         console.log('Fetched Waste Requests:', response.data); // Debugging line
         setWasteRequests(response.data);
       } catch (error) {
@@ -24,7 +24,7 @@ const AdminDashboard = () => {
 
   const handleAccept = async (id) => {
     try {
-      await axios.post(`http://localhost:5000/api/waste/accept/${id}`);
+      await axios.post(`https://project-9jg7.onrender.com/api/waste/accept/${id}`);
       alert('Waste request accepted');
       // Update UI after accepting
       setWasteRequests(wasteRequests.map(req => req._id === id ? { ...req, status: 'accepted' } : req));
@@ -35,7 +35,7 @@ const AdminDashboard = () => {
 
   const handleReject = async (id) => {
     try {
-      await axios.post(`http://localhost:5000/api/waste/reject/${id}`);
+      await axios.post(`https://project-9jg7.onrender.com/api/waste/reject/${id}`);
       alert('Waste request rejected');
       // Update UI after rejecting
       setWasteRequests(wasteRequests.map(req => req._id === id ? { ...req, status: 'rejected' } : req));
@@ -77,7 +77,7 @@ const AdminDashboard = () => {
                     <td>
                       {request.file ? (
                         <a
-                          href={`http://localhost:5000/api/waste/get-waste-images/${request.file}`}
+                          href={`https://project-9jg7.onrender.com/api/waste/get-waste-images/${request.file}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >
