@@ -1,0 +1,267 @@
+/* Styles for the FarmerLanding */
+
+/* Loading and Error Messages */
+.loading {
+  font-size: 18px;
+  color: #4CAF50;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.error {
+  font-size: 18px;
+  color: red;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Header Styles */
+.header {
+  background-color: #2f8f2f;
+  padding: 0.6rem; /* Adjusted padding */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  height: 10vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.8rem; /* Increased font size */
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin-left: 2rem; /* Increased margin */
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem; /* Increased font size */
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: #e0e0e0; /* Hover effect */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px; /* Increased size */
+  height: 50px; /* Increased size */
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.selectMenu {
+  background-color: #2f8f2f;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.6rem; /* Adjusted padding */
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.selectMenu:hover {
+  background-color: #246f24; /* Darker shade on hover */
+}
+
+/* Banner Section */
+.banner {
+  background-image: url('../../assets/banner_images/dan-meyers-IQVFVH0ajag-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 20px; /* Increased padding */
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; /* Adjusted height */
+}
+
+.banner {
+  background-color: #4caf50; /* Replace with your desired banner background color */
+  padding: 2rem; /* Add padding for spacing */
+  text-align: center; /* Center the text */
+}
+
+.banner h1, .banner p { /* Assuming your text is inside h1 and p tags */
+  color: white; /* Set text color to white */
+  margin: 0; /* Remove default margin */
+}
+
+.banner h1 {
+  font-size: 2.5rem; /* Adjust font size as needed */
+}
+
+.banner p {
+  font-size: 1.25rem; /* Adjust font size for paragraph */
+}
+
+
+.title {
+  font-size: 48px; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.message {
+  font-size: 20px; /* Increased font size */
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Card Section */
+.cardSection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjusted for 5 cards per row */
+  gap: 20px; /* Adds spacing between cards */
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.card {
+  background: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 0.5rem; /* Reduced margin */
+}
+
+.message {
+  font-size: 16px; /* Adjusted font size for content */
+  line-height: 1.4; /* Adjusted line height */
+  margin-top: 5px; /* Reduced margin */
+}
+
+
+
+
+
+
+/* Blog Section */
+.blogSection {
+  padding: 3rem; /* Increased padding */
+  background-color: #f9f9f9;
+}
+
+.blogTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: bold;
+  color: #333;
+}
+
+.blogList {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.blogCard {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%;
+  padding: 1.5rem; /* Increased padding */
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.blogCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.blogImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Products Section */
+.productsSection {
+  padding: 3rem; /* Increased padding */
+  background-color: #ffffff; /* Background color for contrast */
+}
+
+.productsTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: bold;
+  color: #333;
+}
+
+.productsContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.productCard {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%;
+  padding: 1.5rem; /* Increased padding */
+  margin: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.productCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.productImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,50 @@
+.addProductContainer {
+  display: flex;
+  padding-top:0px;
+
+}
+
+.mainContent {
+  margin-left: 0px; 
+  padding: 0px;
+  flex-grow: 1;
+}
+
+.form {
+  max-width: 600px;
+  margin: auto;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  padding-left: 450px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+ 
+}
+
+.submitButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #004d40;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}

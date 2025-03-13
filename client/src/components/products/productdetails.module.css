@@ -1,0 +1,48 @@
+/* Container for product details page */
+.detailsContainer {
+    padding: 40px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    text-align: center;
+  }
+  
+  /* Image container */
+  .imageContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .productImage {
+    width: 300px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Back button */
+  .backButton {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .backButton:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Error message */
+  .error {
+    color: red;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  

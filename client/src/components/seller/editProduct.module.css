@@ -1,0 +1,86 @@
+/* editProduct.module.css */
+.editProductContainer {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    border-color: #5d9cec;
+    box-shadow: 0 0 5px rgba(93, 156, 236, 0.5);
+  }
+  
+  textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+  
+  .currentImage {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .currentImage img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .updateButton {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #5d9cec;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .updateButton:hover {
+    background-color: #4a89dc;
+  }
+  
+  p {
+    color: #ff6b6b;
+    font-size: 1rem;
+    text-align: center;
+  }
+  

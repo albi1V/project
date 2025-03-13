@@ -1,0 +1,55 @@
+/* reportedblog.module.css */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.adminLayout {
+  display: flex;
+}
+
+.reportedBlogs {
+  flex: 1;
+  padding: 20px;
+}
+
+.reportCard {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 8px 0;
+}
+
+.blogContent {
+  margin-top: 10px;
+}
+
+.deleteButton {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 150px;
+  border-radius: 5px;
+}
+
+.blogImage {
+  width: 50%;
+  max-width: 3000px;
+  height: auto;
+  margin-top: 10px;
+}
+
+  

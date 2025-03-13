@@ -1,0 +1,74 @@
+/* Footer.css */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-left, .footer-right {
+    display: flex;
+  }
+  
+  .footer-section {
+    margin-right: 40px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .footer-section p, .footer-section ul {
+    margin: 0;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ddd; /* Slightly lighter color on hover */
+  }
+  
+  .footer-section p a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-section p a:hover {
+    color: #ddd;
+  }
+  
+  /* Make the footer responsive */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-left, .footer-right {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  

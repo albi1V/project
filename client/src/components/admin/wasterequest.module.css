@@ -1,0 +1,121 @@
+.dashboardContainer {
+  padding: 0px;
+  background-color: #f9f9f9; /* Light background for better visibility */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+  text-align: center;
+  color: #333; /* Darker color for better contrast */
+}
+
+.adminLayout {
+  display: flex; /* Flexbox layout for sidebar and content */
+}
+
+.contentContainer {
+  flex: 1; /* Content area takes remaining space */
+  padding: 20px; /* Padding inside the content */
+}
+
+.requestsTable {
+  width: 100%;
+  border-collapse: collapse; /* Remove gaps between table cells */
+  margin-top: 20px; /* Space above the table */
+  border-radius: 8px; /* Rounded corners for table */
+  overflow: hidden; /* Prevent border-radius clipping */
+}
+
+.requestsTable th,
+.requestsTable td {
+  border: 1px solid #ddd; /* Light border for cells */
+  padding: 12px; /* Spacing inside cells */
+  text-align: left; /* Align text to the left */
+}
+
+.requestsTable th {
+  background-color: #4CAF50; /* Green header */
+  color: white; /* White text for headers */
+}
+
+.requestsTable tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+.requestsTable tr:hover {
+  background-color: #ddd; /* Highlight row on hover */
+}
+
+.acceptBtn,
+.rejectBtn {
+  padding: 10px 15px; /* Padding for buttons */
+  margin: 5px; /* Margin around buttons */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 14px; /* Font size for buttons */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  display: inline-block; /* Ensure buttons align properly */
+}
+
+.acceptBtn {
+  background-color: #4CAF50; /* Green for accept button */
+  color: white; /* White text */
+}
+
+.rejectBtn {
+  background-color: #f44336; /* Red for reject button */
+  color: white; /* White text */
+}
+
+.acceptBtn:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.rejectBtn:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+.requestsTable a {
+  color: #2196F3; /* Link color */
+  text-decoration: none; /* No underline */
+}
+
+.requestsTable a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Sidebar styles (add your specific styles) */
+.sidebar {
+  width: 250px; /* Fixed width for sidebar */
+  background-color: #333; /* Dark background for sidebar */
+  color: white; /* White text */
+  padding: 15px; /* Padding inside sidebar */
+  height: 100vh; /* Full height sidebar */
+}
+
+.sidebar a {
+  color: white; /* Link color */
+  text-decoration: none; /* No underline */
+  display: block; /* Block display for full width */
+  padding: 10px; /* Padding for links */
+  border-radius: 5px; /* Rounded corners for links */
+  margin: 5px 0; /* Margin between links */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.sidebar a:hover {
+  background-color: #555; /* Darker background on hover */
+}
+
+/* Navbar styles (add your specific styles) */
+.navbar {
+  background-color: #4CAF50; /* Green background for navbar */
+  color: white; /* White text */
+  padding: 10px; /* Padding inside navbar */
+  text-align: center; /* Center align text */
+  position: sticky; /* Keep navbar at the top */
+  top: 0; /* Stick to top */
+  z-index: 10; /* Ensure it is above other content */
+}

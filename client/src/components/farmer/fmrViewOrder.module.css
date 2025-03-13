@@ -1,0 +1,57 @@
+/* fmrViewOrder.module.css */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.adminLayout {
+  display: flex;
+  width: 100%;
+}
+
+.ordersContainer {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.ordersHeading {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ordersTable th, .ordersTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.orders-container {
+  padding: 20px;
+}
+
+.orders-heading {
+  margin-bottom: 20px;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders-table th, .orders-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.orders-table th {
+  background-color: #f4f4f4;
+}

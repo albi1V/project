@@ -1,0 +1,79 @@
+/* Basic layout styling */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .adminLayout {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 20%;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+  }
+  
+  /* Trend list container */
+  .trendList {
+    width: 80%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Button styling */
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Additional styles for Navbar */
+  .navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 15px;
+    color: white;
+    text-align: center;
+  }
+  

@@ -1,0 +1,86 @@
+/* General Styles */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.adminLayout {
+  display: flex;
+  flex: 1;
+  padding: 0px;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.formContainer {
+  flex: 1;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-left: 0px; /* Space between sidebar and form */
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #343a40; /* Darker color for the heading */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #495057; /* Dark gray color for labels */
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ced4da; /* Light border */
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="file"] {
+  margin-top: 5px;
+}
+
+button {
+  background-color: #28a745; /* Green button */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+button:disabled {
+  background-color: #ccc; /* Gray button when disabled */
+  cursor: not-allowed;
+}
+
+/* Error message styles */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .adminLayout {
+    flex-direction: column; /* Stack layout on smaller screens */
+  }
+
+  .formContainer {
+    margin-left: 0; /* Remove margin on small screens */
+  }
+}

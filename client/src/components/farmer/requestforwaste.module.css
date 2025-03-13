@@ -1,0 +1,43 @@
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Adjust if needed */
+}
+
+.adminLayout {
+  display: flex;
+  flex: 1;
+}
+
+.formContainer {
+  flex: 1; /* Takes up the remaining space in the flex container */
+  padding: 70px; /* Ensures consistent padding around the content */
+  overflow-y: auto; /* Allows vertical scrolling if the content overflows */
+  background-color: #f8f9fa; /* Light background color for contrast */
+  border-radius: 8px; /* Rounded corners for aesthetic appeal */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex; /* Allows for child elements to be flex items */
+  flex-direction: column; /* Stacks child elements vertically */
+}
+
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.submitButton {
+  background-color: #28a745; /* Green button */
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.submitButton:disabled {
+  background-color: #ccc; /* Gray button when disabled */
+}

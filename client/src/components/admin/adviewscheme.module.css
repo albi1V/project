@@ -1,0 +1,75 @@
+/* adviewscheme.module.css */
+
+.adminContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+.adminLayout {
+  display: flex; /* Side by side layout for sidebar and content */
+  flex: 1; /* Allow this section to take the remaining space */
+}
+
+.schemeList {
+  flex: 1; /* Take the remaining space */
+  padding: 20px; /* Padding around the content */
+  background-color: #f5f5f5; /* Light background color */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.schemeItem {
+  background: white; /* White background for each scheme item */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 15px; /* Padding inside each scheme item */
+  margin-bottom: 15px; /* Space between items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+.schemeItem p {
+  color: black; /* Updated to black */
+}
+
+
+.buttons {
+  margin-top: 10px; /* Space above the buttons */
+}
+
+.editBtn,
+.deleteBtn {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px 15px; /* Padding inside buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-right: 10px; /* Space between buttons */
+}
+
+.deleteBtn {
+  background-color: #dc3545; /* Bootstrap danger color */
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+  opacity: 0.8; /* Slightly fade on hover */
+}
+
+/* Sidebar and Navbar specific styles can go here */
+/* Ensure you create their own CSS modules or styles */
+
+.sidebar {
+  width: 250px; /* Set width for sidebar */
+  background-color: #343a40; /* Dark background for sidebar */
+  color: white; /* White text */
+  padding: 20px; /* Padding around sidebar items */
+}
+
+.navbar {
+  height: 60px; /* Height for navbar */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text */
+  display: flex; /* Flex for layout */
+  align-items: center; /* Center items vertically */
+  padding: 0 20px; /* Padding for navbar */
+}
