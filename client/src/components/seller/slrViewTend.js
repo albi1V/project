@@ -13,7 +13,7 @@ const MarketTrends = () => {
   useEffect(() => {
     const fetchMarketTrends = async () => {
       try {
-        const response = await axios.get('https://project-9jg7.onrender.com/api/trend/all');
+        const response = await axios.get('http://localhost:5000/api/trend/all');
         const sortedTrends = sortTrendsByDate(response.data); // Sort the trends by date
         setMarketTrends(sortedTrends);
       } catch (error) {

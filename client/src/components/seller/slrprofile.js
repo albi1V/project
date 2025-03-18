@@ -26,7 +26,7 @@ const SellerProfile = () => {
       }
 
       try {
-        const userResponse = await axios.get(`https://project-9jg7.onrender.com/api/auth/user/${email}`, {
+        const userResponse = await axios.get(`http://localhost:5000/api/auth/user/${email}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -34,7 +34,7 @@ const SellerProfile = () => {
         setUserData(userResponse.data);
 
         const sellerEmail = userResponse.data.email;
-        const productsResponse = await axios.get(`https://project-9jg7.onrender.com/api/products/user/${sellerEmail}`, {
+        const productsResponse = await axios.get(`http://localhost:5000/api/products/user/${sellerEmail}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -61,7 +61,7 @@ const SellerProfile = () => {
 
     try {
       setDeletingProductId(productId);
-      await axios.delete(`https://project-9jg7.onrender.com/api/products/delete/${productId}`, {
+      await axios.delete(`http://localhost:5000/api/products/delete/${productId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -134,7 +134,7 @@ const SellerProfile = () => {
                         {product.images && product.images.length > 0 && (
                           <>
                             <img
-                              src={`https://project-9jg7.onrender.com/api/products/get-product-images/${product.images[currentImageIndex[product._id]]}`}
+                              src={`http://localhost:5000/api/products/get-product-images/${product.images[currentImageIndex[product._id]]}`}
                               alt={product.name}
                               className={styles.productImage}
                             />

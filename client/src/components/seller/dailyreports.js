@@ -24,7 +24,7 @@ const OrderAnalysis = () => {
 
   const fetchOrderData = async (filter = false) => {
     try {
-      let url = `https://project-9jg7.onrender.com/api/seller/order-analysis/${sellerId}`;
+      let url = `http://localhost:5000/api/seller/order-analysis/${sellerId}`;
       if (filter && startDate && endDate) {
         url += `?startDate=${startDate}&endDate=${endDate}`;
       }

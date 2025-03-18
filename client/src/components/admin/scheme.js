@@ -42,7 +42,7 @@ const AddScheme = () => {
       formData.append('document', file);
 
       const token = localStorage.getItem('token');
-      await axios.post('https://project-9jg7.onrender.com/api/schemes/add-schemes', formData, {
+      await axios.post('http://localhost:5000/api/schemes/add-schemes', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`

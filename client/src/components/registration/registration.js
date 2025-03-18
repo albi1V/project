@@ -115,7 +115,7 @@ const Registration = () => {
 
   const handleOTPSend = async () => {
     try {
-      const response = await axios.post('https://project-9jg7.onrender.com/api/auth/send-otp', { email });
+      const response = await axios.post('http://localhost:5000/api/auth/send-otp', { email });
       console.log(response);
     } catch (error) {
       console.error('Error sending OTP:', error);
@@ -137,7 +137,7 @@ const Registration = () => {
     };
 
     try {
-      const response = await axios.post('https://project-9jg7.onrender.com/api/auth/register', formData);
+      const response = await axios.post('http://localhost:5000/api/auth/register', formData);
 
       if (response.data.status === 1) {
         setSuccessMessage(response.data.message);

@@ -12,7 +12,7 @@ const BuyerOrdersPage = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const response = await axios.get('https://project-9jg7.onrender.com/api/orders/buyer-orders', {
+        const response = await axios.get('http://localhost:5000/api/orders/buyer-orders', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

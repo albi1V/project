@@ -128,7 +128,7 @@ const WasteManagementRequest = () => {
     try {
       const token = localStorage.getItem('token');
 
-      const response = await axios.post('https://project-9jg7.onrender.com/api/waste/request', formDataToSubmit, {
+      const response = await axios.post('http://localhost:5000/api/waste/request', formDataToSubmit, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${token}`,

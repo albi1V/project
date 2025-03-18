@@ -40,7 +40,7 @@ const AddMarketTrend = () => {
     if (!isFormValid) return;
 
     try {
-      const response = await axios.post('https://project-9jg7.onrender.com/api/trend/add', {
+      const response = await axios.post('http://localhost:5000/api/trend/add', {
         productName,
         marketValue,
         ourPrice,

@@ -21,7 +21,7 @@ const EditProduct = () => {
 
         console.log(`Fetching product with ID: ${productId}`);
 
-        const response = await axios.get(`https://project-9jg7.onrender.com/api/products/get-by-id/${productId}`, {
+        const response = await axios.get(`http://localhost:5000/api/products/get-by-id/${productId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -57,7 +57,7 @@ const EditProduct = () => {
       const token = localStorage.getItem('token');
   
       // Send the form data to the server
-      await axios.put(`https://project-9jg7.onrender.com/api/products/edit/${productId}`, formData, {
+      await axios.put(`http://localhost:5000/api/products/edit/${productId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
@@ -125,7 +125,7 @@ const EditProduct = () => {
           <div className={styles.currentImage}>
             <p>Current Image:</p>
             <img
-              src={`https://project-9jg7.onrender.com/api/products/get-product-images/${productData.image}`}
+              src={`http://localhost:5000/api/products/get-product-images/${productData.image}`}
               alt="Current Product"
             />
           </div>

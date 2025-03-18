@@ -46,7 +46,7 @@ const FarmerLanding = () => {
 
       try {
         const response = await axios.get(
-          `https://project-9jg7.onrender.com/api/auth/user/${email}`,
+          `http://localhost:5000/api/auth/user/${email}`,
           {
             headers: {
               Authorization: `Bearer ${token}`, // Include the token for authorization

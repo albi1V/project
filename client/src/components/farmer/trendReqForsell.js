@@ -50,7 +50,7 @@ const SellProduct = () => {
     try {
       const token = localStorage.getItem('token'); // Retrieve the token from local storage
 
-      const response = await axios.post('https://project-9jg7.onrender.com/api/trendsell/register', {
+      const response = await axios.post('http://localhost:5000/api/trendsell/register', {
         productName: product,
         quantity,
         price,

@@ -16,7 +16,7 @@ const ViewBlogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get('https://project-9jg7.onrender.com/api/blog/all');
+        const response = await axios.get('http://localhost:5000/api/blog/all');
         setBlogs(response.data);
         setLoading(false);
       } catch (err) {
@@ -46,7 +46,7 @@ const ViewBlogs = () => {
 
     if (selectedReason) {
       try {
-        await axios.post('https://project-9jg7.onrender.com/api/report/submit', {
+        await axios.post('http://localhost:5000/api/report/submit', {
           blogId: selectedBlogId,
           reason: selectedReason,
           userId: userId,
@@ -82,7 +82,7 @@ const ViewBlogs = () => {
                 <h2>{blog.title}</h2>
                 <p className={styles.blogContent}>{blog.content}</p>
                 {blog.image && (
-                  <img src={`https://project-9jg7.onrender.com/api/blog/get-blog-images/${blog.image}`} alt={blog.title} />
+                  <img src={`http://localhost:5000/api/blog/get-blog-images/${blog.image}`} alt={blog.title} />
                 )}
                 <button onClick={() => handleReportClick(blog._id)} className={styles.reportButton}>Report</button>
               </div>
