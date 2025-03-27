@@ -76,7 +76,7 @@ const AddBlog = () => {
 
     try {
       await axios.post(
-        'http://localhost:5000/api/blog/addblog',
+        'https://project-9jg7.onrender.com/api/blog/addblog',
         formData,
         {
           headers: {

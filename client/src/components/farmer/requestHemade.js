@@ -10,7 +10,7 @@ const UserDashboard = () => {
   useEffect(() => {
     const fetchUserWasteRequests = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/waste/my-requests', {
+        const response = await axios.get('https://project-9jg7.onrender.com/api/waste/my-requests', {
           headers: {
             'Authorization': `Bearer ${localStorage.getItem('token')}`,
           },
@@ -54,7 +54,7 @@ const UserDashboard = () => {
                     <td>
                       {request.file ? (
                         <a
-                          href={`http://localhost:5000/api/waste/get-waste-images/${request.file}`}
+                          href={`https://project-9jg7.onrender.com/api/waste/get-waste-images/${request.file}`}
                           target="_blank"
                           rel="noopener noreferrer"
                         >

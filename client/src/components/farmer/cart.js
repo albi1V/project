@@ -15,7 +15,7 @@ const Cart = () => {
       const token = localStorage.getItem('token');
 
       try {
-        const response = await axios.get('http://localhost:5000/api/cart/getcart', {
+        const response = await axios.get('https://project-9jg7.onrender.com/api/cart/getcart', {
           headers: { Authorization: `Bearer ${token}` },
         });
         console.log('Fetched Cart Items:', response.data);
@@ -41,7 +41,7 @@ const Cart = () => {
         return;
       }
 
-      await axios.delete(`http://localhost:5000/api/cart/remove/${productId}`, {
+      await axios.delete(`https://project-9jg7.onrender.com/api/cart/remove/${productId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
   
@@ -55,7 +55,7 @@ const Cart = () => {
     const token = localStorage.getItem('token');
   
     try {
-      await axios.put(`http://localhost:5000/api/cart/increase/${productId}`, {}, {
+      await axios.put(`https://project-9jg7.onrender.com/api/cart/increase/${productId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
   
@@ -73,7 +73,7 @@ const Cart = () => {
     const token = localStorage.getItem('token');
   
     try {
-      await axios.put(`http://localhost:5000/api/cart/decrease/${productId}`, {}, {
+      await axios.put(`https://project-9jg7.onrender.com/api/cart/decrease/${productId}`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
   
@@ -106,7 +106,7 @@ const Cart = () => {
         }
   
         // Call the stock check API for each product
-        const stockResponse = await axios.get(`http://localhost:5000/api/products/check-stock/${productId}`, {
+        const stockResponse = await axios.get(`https://project-9jg7.onrender.com/api/products/check-stock/${productId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
   
@@ -159,7 +159,7 @@ const Cart = () => {
                   <div key={product._id} className={styles.cartItem}>
                     {product.images && product.images.length > 0 ? (
                       <img
-                        src={`http://localhost:5000/api/products/get-product-images/${product.images[0]}`}
+                        src={`https://project-9jg7.onrender.com/api/products/get-product-images/${product.images[0]}`}
                         alt={product.name || 'Product Image'}
                         className={styles.productImage}
                       />

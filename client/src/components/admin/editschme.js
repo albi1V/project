@@ -22,7 +22,7 @@ const EditScheme = () => {
   useEffect(() => {
     const fetchScheme = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/schemes/get-scheme-by-id/${schemeId}`, {
+        const response = await axios.get(`https://project-9jg7.onrender.com/api/schemes/get-scheme-by-id/${schemeId}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setSchemeData(response.data);
@@ -60,7 +60,7 @@ const EditScheme = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/schemes/edit/${schemeId}`, formData, {
+      await axios.put(`https://project-9jg7.onrender.com/api/schemes/edit/${schemeId}`, formData, {
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data',
@@ -155,7 +155,7 @@ const EditScheme = () => {
         <div className={styles.formGroup}>
           <label htmlFor="documentUrl">Uploaded Document:</label>
           {schemeData.documentUrl ? (
-            <a href={`http://localhost:5000/api/schemes/get-scheme-files/${schemeData.documentUrl}`} target="_blank" rel="noopener noreferrer">
+            <a href={`https://project-9jg7.onrender.com/api/schemes/get-scheme-files/${schemeData.documentUrl}`} target="_blank" rel="noopener noreferrer">
               View Current Document
             </a>
           ) : <p>No document available</p>}

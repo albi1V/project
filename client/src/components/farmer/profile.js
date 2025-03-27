@@ -26,7 +26,7 @@ const Profile = () => {
 
       try {
         // Fetch user data
-        const userResponse = await axios.get(`http://localhost:5000/api/auth/user/${email}`, {
+        const userResponse = await axios.get(`https://project-9jg7.onrender.com/api/auth/user/${email}`, {
           headers: {
             Authorization: `Bearer ${token}`, // Include the token for authorization
           },
@@ -42,7 +42,7 @@ const Profile = () => {
         setUserData(userData); // Store the user data
 
         // Fetch user's blogs using the userId
-        const blogsResponse = await axios.get(`http://localhost:5000/api/blog/view/user/${userData._id}`, {
+        const blogsResponse = await axios.get(`https://project-9jg7.onrender.com/api/blog/view/user/${userData._id}`, {
           headers: {
             Authorization: `Bearer ${token}`, // Include the token for authorization
           },
@@ -63,7 +63,7 @@ const Profile = () => {
   const handleDelete = async (blogId) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/blog/delete/${blogId}`, {
+      await axios.delete(`https://project-9jg7.onrender.com/api/blog/delete/${blogId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -116,7 +116,7 @@ const Profile = () => {
                   <p className={styles.blogContent}>{blog.content}</p>
                   {blog.image && (
                     <img
-                      src={`http://localhost:5000/api/blog/get-blog-images/${blog.image}`}
+                      src={`https://project-9jg7.onrender.com/api/blog/get-blog-images/${blog.image}`}
                       alt={blog.title}
                     />
                   )}

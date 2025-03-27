@@ -20,10 +20,10 @@ const AdminConsole = () => {
     // Fetch counts
     const fetchCounts = async () => {
       try {
-        const sellersResponse = await axios.get('http://localhost:5000/api/adminconsole/scount');
-        const farmersResponse = await axios.get('http://localhost:5000/api/adminconsole/fcount');
-        const productsResponse = await axios.get('http://localhost:5000/api/adminconsole/prcount');
-        const postsResponse = await axios.get('http://localhost:5000/api/adminconsole/pcount');
+        const sellersResponse = await axios.get('https://project-9jg7.onrender.com/api/adminconsole/scount');
+        const farmersResponse = await axios.get('https://project-9jg7.onrender.com/api/adminconsole/fcount');
+        const productsResponse = await axios.get('https://project-9jg7.onrender.com/api/adminconsole/prcount');
+        const postsResponse = await axios.get('https://project-9jg7.onrender.com/api/adminconsole/pcount');
 
         setSellersCount(sellersResponse.data.count);
         setFarmersCount(farmersResponse.data.count);

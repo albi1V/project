@@ -39,7 +39,7 @@ const CropAnalysis = () => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/plantlocation/weather?lat=${latitude}&lng=${longitude}`
+        `https://project-9jg7.onrender.com/api/plantlocation/weather?lat=${latitude}&lng=${longitude}`
       );
 
       const { weather, suitableCrops } = response.data;
@@ -73,7 +73,7 @@ const CropAnalysis = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/plantlocation/crop-analysis', {
+      const response = await axios.post('https://project-9jg7.onrender.com/api/plantlocation/crop-analysis', {
         latitude,
         longitude,
         crop,

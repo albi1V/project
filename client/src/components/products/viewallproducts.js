@@ -17,7 +17,7 @@ const ViewAllProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/products/all');
+        const response = await axios.get('https://project-9jg7.onrender.com/api/products/all');
         setProducts(response.data);
         setDisplayedProducts(response.data);
 
@@ -46,7 +46,7 @@ const ViewAllProducts = () => {
     }
 
     try {
-      const response = await axios.get(`http://localhost:5000/api/products/search`, {
+      const response = await axios.get(`https://project-9jg7.onrender.com/api/products/search`, {
         params: { name: searchQuery },
       });
 
@@ -73,7 +73,7 @@ const ViewAllProducts = () => {
 
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/cart/addcart',
+        'https://project-9jg7.onrender.com/api/cart/addcart',
         { productId, quantity },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -142,7 +142,7 @@ const ViewAllProducts = () => {
                   {product.images && product.images.length > 0 && (
                     <>
                       <img
-                        src={`http://localhost:5000/api/products/get-product-images/${product.images[currentImageIndex[product._id]] || 0}`}
+                        src={`https://project-9jg7.onrender.com/api/products/get-product-images/${product.images[currentImageIndex[product._id]] || 0}`}
                         alt={product.name}
                         className={styles.productImage}
                       />

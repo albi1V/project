@@ -26,7 +26,7 @@ const EditProfile = () => {
       }
 
       try {
-        const response = await axios.get(`http://localhost:5000/api/auth/user/${email}`, {
+        const response = await axios.get(`https://project-9jg7.onrender.com/api/auth/user/${email}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +51,7 @@ const EditProfile = () => {
     const token = localStorage.getItem('token');
 
     try {
-      await axios.put(`http://localhost:5000/api/auth/user/${userData.email}`, userData, {
+      await axios.put(`https://project-9jg7.onrender.com/api/auth/user/${userData.email}`, userData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

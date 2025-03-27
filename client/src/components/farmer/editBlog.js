@@ -19,7 +19,7 @@ const EditBlog = () => {
             const token = localStorage.getItem('token');
             console.log('Token:', token); // Log the token for debugging
             
-            const response = await axios.get(`http://localhost:5000/api/blog/get-by-id/${blogId}`, {
+            const response = await axios.get(`https://project-9jg7.onrender.com/api/blog/get-by-id/${blogId}`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -56,7 +56,7 @@ const EditBlog = () => {
       }
 
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:5000/api/blog/edit-by-id/${blogId}`, formData, {
+      await axios.put(`https://project-9jg7.onrender.com/api/blog/edit-by-id/${blogId}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${token}`,
@@ -113,7 +113,7 @@ const EditBlog = () => {
           <div className={styles.currentImage}>
             <p>Current Image:</p>
             <img
-              src={`http://localhost:5000/api/blog/get-blog-images/${blogData.image}`}
+              src={`https://project-9jg7.onrender.com/api/blog/get-blog-images/${blogData.image}`}
               alt="Current Blog"
             />
           </div>

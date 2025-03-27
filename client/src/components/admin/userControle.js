@@ -11,7 +11,7 @@ const AdminUserControl = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/usercontrole/users');
+        const response = await axios.get('https://project-9jg7.onrender.com/api/usercontrole/users');
         setUsers(response.data);
       } catch (error) {
         setMessage('Error fetching users.');
@@ -29,7 +29,7 @@ const AdminUserControl = () => {
     }
   
     try {
-      const response = await axios.put(`http://localhost:5000/api/usercontrole/block/${userId}`, {}, {
+      const response = await axios.put(`https://project-9jg7.onrender.com/api/usercontrole/block/${userId}`, {}, {
         headers: {
           'Authorization': `Bearer ${token}`, // Pass token here
         },
@@ -59,7 +59,7 @@ const AdminUserControl = () => {
     }
   
     try {
-      const response = await axios.put(`http://localhost:5000/api/usercontrole/unblock/${userId}`, {}, {
+      const response = await axios.put(`https://project-9jg7.onrender.com/api/usercontrole/unblock/${userId}`, {}, {
         headers: {
           'Authorization': `Bearer ${token}`, // Include token in headers
         },

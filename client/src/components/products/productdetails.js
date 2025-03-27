@@ -22,7 +22,7 @@ const ProductDetails = () => {
           },
         };
 
-        const response = await axios.get(`http://localhost:5000/api/products/get-by-id/${id}`, config);
+        const response = await axios.get(`https://project-9jg7.onrender.com/api/products/get-by-id/${id}`, config);
         setProduct(response.data);
         setLoading(false);
       } catch (error) {
@@ -60,7 +60,7 @@ const ProductDetails = () => {
           product.images.map((image, index) => (
             <img
               key={index}
-              src={`http://localhost:5000/api/products/get-product-images/${image}`}
+              src={`https://project-9jg7.onrender.com/api/products/get-product-images/${image}`}
               alt={product.name}
               className={styles.productImage}
             />

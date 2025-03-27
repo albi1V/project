@@ -11,7 +11,7 @@ const TendPurchReq = () => {
   useEffect(() => {
     const fetchRequests = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/trendsell');
+        const response = await axios.get('https://project-9jg7.onrender.com/api/trendsell');
         setRequests(response.data);
       } catch (error) {
         console.error('Error fetching requests:', error);
@@ -24,7 +24,7 @@ const TendPurchReq = () => {
 
   const handleAccept = async (id) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/trendsell/accept/${id}`);
+      const response = await axios.put(`https://project-9jg7.onrender.com/api/trendsell/accept/${id}`);
       setRequests((prevRequests) =>
         prevRequests.map((request) => (request._id === id ? { ...request, status: 'accepted' } : request))
       );
@@ -37,7 +37,7 @@ const TendPurchReq = () => {
 
   const handleReject = async (id) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/trendsell/reject/${id}`);
+      const response = await axios.put(`https://project-9jg7.onrender.com/api/trendsell/reject/${id}`);
       setRequests((prevRequests) =>
         prevRequests.map((request) => (request._id === id ? { ...request, status: 'rejected' } : request))
       );
